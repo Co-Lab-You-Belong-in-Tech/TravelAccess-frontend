@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mainHeader {
+  @apply flex flex-row justify-between container mx-auto my-4;
+}
+.left {
+  @apply flex items-center justify-between gap-2;
+}
