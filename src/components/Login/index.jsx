@@ -1,13 +1,37 @@
 import img from '../../assets/signupimg.jpg';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axiosInstance from '../../helper/axios';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = e => {
     e.preventDefault();
+    setEmail('');
   };
+
+  const login = () => {
+    axiosInstance.get('/tokens/create', { email }).then(res => {
+      const { data } = res;
+      console.log(data);
+      navigate('/dashboard');
+    });
+  };
+
+  // useEffect(() => {
+  //   if (localStorage.getItem('token')) {
+  //     navigate('/dashboard');
+  //     // history.push('/dashboard');
+  //   }
+
+  //   return () => {
+  //     login();
+  //   };
+  // }, []);
+  login();
+
   return (
     <div>
       <section className='container mx-auto mt-16'>
@@ -27,14 +51,14 @@ const Login = () => {
             />
 
             <div className=' flex justify-center items-center '>
-              <Link to='Header'>
-                <button
-                  type='submit'
-                  className=' rounded-full border-black border p-2 w-44 '
-                >
-                  Login
-                </button>
-              </Link>
+              {/* <Link to='Header'> */}
+              <button
+                type='submit'
+                className=' rounded-full border-black border p-2 w-44 '
+              >
+                Login
+              </button>
+              {/* </Link> */}
             </div>
 
             <div>
