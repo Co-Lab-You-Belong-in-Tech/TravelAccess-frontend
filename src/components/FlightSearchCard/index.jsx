@@ -12,23 +12,29 @@ const FlightSearchCard = () => {
           <form className='grid gap-8 grid-cols-2 lg:grid-cols-3 lg:gap-x-20 gap-y-0'>
             <div className='flex flex-col'>
               <label className='my-3'>Departing</label>
-              <input type='text' className='p-2' />
+              <input type='text' title='Departing' className='p-2' />
             </div>
             <div className='flex flex-col'>
               <label className='my-3'>Returning</label>
-              <input type='text' className='p-2' />
+              <input type='text' title= 'Returning' className='p-2' />
             </div>
             <div className='flex flex-col'>
               <label className='my-3'>Travelers</label>
-              <input type='text' className='p-2' />
+              <input type='text' title='Travelers' className='p-2' />
             </div>
             <div className='flex flex-col'>
               <label className='my-3'>From</label>
-              <input type='text' className='p-2' />
+              <input type='text' title='From' className='p-2' />
             </div>
             <div className='flex flex-col'>
               <label className='my-3'>To</label>
-              <input type='text' className='p-2' />
+              <input type='text' title='To' className='p-2' />
+            </div>
+            <div>
+              <select title="choose">
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
           </form>
         </div>
