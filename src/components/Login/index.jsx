@@ -1,6 +1,6 @@
 import img from '../../assets/signupimg.jpg';
 import { useState, useEffect } from 'react';
-import axiosInstance from '../../helper/axios';
+// import axiosInstance from '../../helper/axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -12,25 +12,25 @@ const Login = () => {
     setEmail('');
   };
 
-  const login = () => {
-    axiosInstance.get('/tokens/create', { email }).then(res => {
-      const { data } = res;
-      console.log(data);
-      navigate('/dashboard');
-    });
-  };
-
-  // useEffect(() => {
-  //   if (localStorage.getItem('token')) {
+  // const login = () => {
+  //   axiosInstance.get('/tokens/create', { email }).then(res => {
+  //     const { data } = res;
+  //     console.log(data);
   //     navigate('/dashboard');
-  //     // history.push('/dashboard');
-  //   }
+  //   });
+  // };
 
-  //   return () => {
-  //     login();
-  //   };
-  // }, []);
-  login();
+  // // useEffect(() => {
+  // //   if (localStorage.getItem('token')) {
+  // //     navigate('/dashboard');
+  // //     // history.push('/dashboard');
+  // //   }
+
+  // //   return () => {
+  // //     login();
+  // //   };
+  // // }, []);
+  // login();
 
   return (
     <div>
