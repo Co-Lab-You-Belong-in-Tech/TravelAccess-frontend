@@ -9,5 +9,5 @@
   @apply flex items-center justify-between gap-2;
 }
 .wrapper {
-  @apply border-solid border-gray-400 border-b border-spacing-y-4;
+  @apply border-solid border-b border-spacing-y-4;
 }

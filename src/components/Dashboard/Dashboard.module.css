@@ -1,19 +1,28 @@
 .subHeader {
-  @apply flex justify-around items-center align-middle border-b border-gray-400;
+  @apply flex justify-around items-center align-middle border-b;
 }
 h3 {
   padding: 0.5rem 0;
 }
+.outerBox {
+  @apply w-4/5 mx-auto;
+}
 .innerBox {
-  @apply w-4/5 bg-gray-200 text-center mx-auto py-5 px-10;
+  @apply bg-gray-200 text-center py-5 my-2;
 }
 .outerTabs {
-  @apply border-b border-gray-400 mb-3;
+  @apply border-b border-gray-800 space-y-20 mb-3 w-full;
 }
 .innerTabs {
-  @apply flex flex-row justify-around items-center;
+  @apply w-[70%] h-6 mx-auto mb-3;
 }
 
-h4 {
-  @apply hover: border-black;
+.tabs {
+  @apply flex justify-around items-center;
+}
+.input {
+  @apply px-2 py-2;
+}
+.formItem {
+  @apply flex flex-col justify-items-start items-start mr-2;
 }
