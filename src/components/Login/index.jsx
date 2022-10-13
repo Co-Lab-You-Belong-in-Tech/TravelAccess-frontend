@@ -10,6 +10,7 @@ const Login = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setEmail('');
+    navigate('/dashboard');
   };
 
   // const login = () => {
@@ -20,16 +21,16 @@ const Login = () => {
   //   });
   // };
 
-  // // useEffect(() => {
-  // //   if (localStorage.getItem('token')) {
-  // //     navigate('/dashboard');
-  // //     // history.push('/dashboard');
-  // //   }
+  // useEffect(() => {
+  //   if (localStorage.getItem('token')) {
+  //     navigate('/dashboard');
+  //     // history.push('/dashboard');
+  //   }
 
-  // //   return () => {
-  // //     login();
-  // //   };
-  // // }, []);
+  //   return () => {
+  //     login();
+  //   };
+  // }, []);
   // login();
 
   return (

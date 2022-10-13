@@ -1,0 +1,19 @@
+.subHeader {
+  @apply flex justify-around items-center align-middle border-b border-gray-400;
+}
+h3 {
+  padding: 0.5rem 0;
+}
+.innerBox {
+  @apply w-4/5 bg-gray-200 text-center mx-auto py-5 px-10;
+}
+.outerTabs {
+  @apply border-b border-gray-400 mb-3;
+}
+.innerTabs {
+  @apply flex flex-row justify-around items-center;
+}
+
+h4 {
+  @apply hover: border-black;
+}
