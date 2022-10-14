@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = e => {
     e.preventDefault();
     setEmail('');
-    navigate('/dashboard');
+    navigate('/dashboard/trip');
   };
 
   // const login = () => {

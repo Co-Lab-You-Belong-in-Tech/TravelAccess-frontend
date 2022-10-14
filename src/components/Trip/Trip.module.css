@@ -1,0 +1,22 @@
+.outerBox {
+  @apply w-4/5 mx-auto;
+}
+.innerBox {
+  @apply bg-gray-200 text-center py-5 my-2;
+}
+.outerTabs {
+  @apply border-b border-gray-800 space-y-20 mb-3 w-full;
+}
+.innerTabs {
+  @apply w-[70%] h-6 mx-auto mb-3;
+}
+
+.tabs {
+  @apply flex justify-around items-center;
+}
+.input {
+  @apply px-2 py-2;
+}
+.formItem {
+  @apply flex flex-col justify-items-start items-start mr-2;
+}

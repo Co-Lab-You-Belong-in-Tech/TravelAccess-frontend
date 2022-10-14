@@ -69,25 +69,25 @@ const Homepage = () => {
                 </div>
               </div>
               <div className={style.formDown}>
-                <div date-rangepicker className='flex flex-col'>
-                  <div className='flex flex-col'>
-                    <label className='mb-2'> Departing</label>
-                    <input
-                      name='start'
-                      type='date'
-                      className='p-1'
-                      placeholder='select date'
-                    />
-                  </div>
-                  <div className='flex flex-col'>
-                    <label className='mb-2'>Returning</label>
-                    <input
-                      name='end'
-                      type='date'
-                      className='p-1'
-                      placeholder='select date'
-                    />
-                  </div>
+                {/* <div date-rangepicker className='flex flex-col'> */}
+                <div className='flex flex-col'>
+                  <label className='mb-2'> Departing</label>
+                  <input
+                    name='start'
+                    type='date'
+                    className='p-1'
+                    placeholder='select date'
+                  />
+                </div>
+                <div className='flex flex-col'>
+                  <label className='mb-2'>Returning</label>
+                  <input
+                    name='end'
+                    type='date'
+                    className='p-1'
+                    placeholder='select date'
+                  />
+                  {/* </div> */}
                 </div>
                 <div className='flex flex-col'>
                   <label className='mb-2'>Travelers</label>
@@ -96,7 +96,7 @@ const Homepage = () => {
                     name='travelers'
                     id='travelers'
                   >
-                    <option value='1'>1</option>
+                    <option value='1'>1 Adult</option>
                     <option value='2'>2</option>
                     <option value='3'>3</option>
                     <option value='4'>4</option>
@@ -105,10 +105,15 @@ const Homepage = () => {
                 </div>
                 <div className='flex flex-col'>
                   <label className='mb-2'>Tickets</label>
-                  <input type='text' className='p-1' />
-                  <div>
-                    <img src={caret} alt='location' />
-                  </div>
+                  <select
+                    className=' bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5'
+                    name='travelers'
+                    id='travelers'
+                  >
+                    <option value='1'>First Class</option>
+                    <option value='2'>Business</option>
+                    <option value='3'>Economy</option>
+                  </select>
                 </div>
               </div>
               <div className={style.buttonContainer}>
