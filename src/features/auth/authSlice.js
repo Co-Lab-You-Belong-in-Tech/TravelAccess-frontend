@@ -1,13 +1,13 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axiosInstance from '../../components/helper/axios';
+import { createSlice } from '@reduxjs/toolkit';
+// import axiosInstance from '../../components/helper/axios';
 
-export const fetchUser = createAsyncThunk(
-  'auth/login',
-  async (email, thunkAPI) => {
-    const response = await axiosInstance.post('/auth/login', email);
-    return response.data;
-  }
-);
+// export const fetchUser = createAsyncThunk(
+//   'auth/login',
+//   async (email, thunkAPI) => {
+//     const response = await axiosInstance.post('/auth/login', email);
+//     return response.data;
+//   }
+// );
 
 export const authSlice = createSlice({
   name: 'auth',
