@@ -19,11 +19,16 @@
 .buttonContainer{
     @apply flex justify-end items-center mt-3 buttonForm;
 }
+
 .explore{
     @apply flex justify-between items-center my-5;
 }
 .location{
     position: relative;
+    
+}
+.location1{
+    position: absolute;
     bottom:12px;
     padding-left: 10px;
     left:150px;

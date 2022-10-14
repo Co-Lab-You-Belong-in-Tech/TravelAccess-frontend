@@ -9,3 +9,9 @@
 
 
 // pls delete the component when thru not part
+
+// ........................homepage.................
+
+//  for me to see what am doing i commented dashboard
+// my idealogy is just thinking when a user login they see the homepage first then when they click on
+//  trips it directs them to the dashboard

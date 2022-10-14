@@ -29,11 +29,11 @@ const Homepage = () => {
 						<form>
 							<div className={style.formUp}>
 								<div className=''>
-									<div className='flex flex-col'>
+									<div className='flex flex-col location'>
 										<label className='mb-2'>From</label>
 										<input type='text' className='p-1' />
 									</div>
-									<div className='location'>
+									<div className='location1'>
 										<img src={location} alt='location' />
 									</div>
 								</div>
@@ -73,7 +73,7 @@ const Homepage = () => {
 							<div className={style.buttonContainer}>
 								<button
 									type='submit'
-									className='rounded-full border-black border p-1 w-44'>
+									className='rounded-full border-black border p-1 w-44  bg-purple-800 text-white border-none'>
 									Search
 								</button>
 							</div>
