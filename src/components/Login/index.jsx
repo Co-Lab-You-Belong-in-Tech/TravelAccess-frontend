@@ -1,6 +1,5 @@
 import img from '../../assets/signupimg.jpg';
 import { useState, useEffect } from 'react';
-// import axiosInstance from '../../helper/axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -53,12 +52,12 @@ const Login = () => {
 
             <div className=' flex justify-center items-center '>
               <Link to='homepage'>
-              <button
-                type='submit'
-                className=' rounded-full border-black border p-2 w-44 '
-              >
-                Login
-              </button>
+                <button
+                  type='submit'
+                  className=' rounded-full border-black border p-2 w-44 '
+                >
+                  Login
+                </button>
               </Link>
             </div>
 

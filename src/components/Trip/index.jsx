@@ -66,16 +66,53 @@ export const Trip = () => {
         </form>
       </div>
       <div>
+        <div>
+          <h5 className='text-gray-900 text-lg leading-tight font-medium mb-2'>
+            Upcoming
+          </h5>
+          <div className='block p-6 rounded-lg shadow-lg bg-white max-w-sm'>
+            <p className='text-gray-700 text-base mb-4'>
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
         <h3>Discover</h3>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-2 justify-center'>
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
-          <img src='https://via.placeholder.com/350x150' alt='' />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
+          <img
+            src='https://via.placeholder.com/350x150'
+            alt='placeholder picture 1'
+          />
         </div>
         <div className='flex flex-row justify-around'></div>
       </div>

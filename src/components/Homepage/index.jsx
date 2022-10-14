@@ -30,19 +30,19 @@ const Homepage = () => {
               <div className={style.formUp}>
                 <div className='flex flex-col location'>
                   <label
-                    for='input-group-1'
-                    class='block mb-2 text-sm font-medium text-gray-900'
+                    htmlFor='input-group-1'
+                    className='block mb-2 text-sm font-medium text-gray-900'
                   >
                     From
                   </label>
-                  <div class='relative mb-6'>
-                    <div class='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
+                  <div className='relative mb-6'>
+                    <div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
                       <MdLocationOn />
                     </div>
                     <input
                       type='text'
                       id='input-group-1'
-                      class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5'
+                      className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5'
                       placeholder='Enter a city or airport'
                     />
                   </div>
@@ -50,19 +50,19 @@ const Homepage = () => {
 
                 <div className='flex flex-col'>
                   <label
-                    for='input-group-1'
-                    class='block mb-2 text-sm font-medium text-gray-900'
+                    htmlFor='input-group-1'
+                    className='block mb-2 text-sm font-medium text-gray-900'
                   >
                     To
                   </label>
-                  <div class='relative mb-6'>
-                    <div class='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
+                  <div className='relative mb-6'>
+                    <div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
                       <MdLocationOn />
                     </div>
                     <input
                       type='text'
                       id='input-group-1'
-                      class='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5'
+                      className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5'
                       placeholder='Enter your destination'
                     />
                   </div>

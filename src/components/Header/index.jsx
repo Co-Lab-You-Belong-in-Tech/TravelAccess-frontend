@@ -1,4 +1,5 @@
 import { FaRegUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import style from './Header.module.css';
 const Header = () => {
   return (
@@ -11,7 +12,9 @@ const Header = () => {
             </h2>
           </div>
           <div className={style.left}>
-            <div>My Trip </div>
+            <h4>
+              <Link to='/dashboard/trip'>My Trip</Link>{' '}
+            </h4>
             <div>
               <FaRegUserCircle />
             </div>
