@@ -1,16 +1,16 @@
-.footerBackground{
-    background-color:#c4c4c4;
-    padding:20px;
-    margin-top: 20px;
+.footerBackground {
+  background-color: #c4c4c4;
+  padding: 20px;
+  margin-top: 20px;
 }
-.footerContent{
-    @apply text-center lg:flex justify-between items-center mx-16;
+.footerContent {
+  @apply text-center lg:flex justify-between items-center w-[90%] lg:w-[80%] mx-auto;
 }
-.footerList{
-    @apply mb-2;
+.footerList {
+  @apply mb-2;
 }
-@media only screen and (max-width:600px){
-    .footerBackground{
-        display:none;
-    }
+@media only screen and (max-width: 600px) {
+  .footerBackground {
+    display: none;
+  }
 }
