@@ -18,7 +18,7 @@ export const Dashboard = () => {
           <div className={style.outerTabs}>
             <div className={style.innerTabs}>
               <div className={style.tabs}>
-                <h4>Flight</h4>
+                <h4>Flights</h4>
                 <h4>Stay</h4>
                 <h4>Bundles</h4>
               </div>

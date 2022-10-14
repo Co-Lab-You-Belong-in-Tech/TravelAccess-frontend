@@ -1,16 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
 import { Dashboard } from './components/Dashboard';
+import Homepage from './components/Homepage';
 import Login from './components/Login';
 import Signup from './components/Signup';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path='/' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
-      <Route path='/dashboard' element={<Dashboard />} />
-    </Routes>
-  );
+		<Routes>
+			<Route path='/' element={<Login />} />
+			<Route path='/homepage' element={<Homepage />} />
+			<Route path='/signup' element={<Signup />} />
+			{/* <Route path='/dashboard' element={<Dashboard />} /> */}
+		</Routes>
+	);
 };
 
 export default App;

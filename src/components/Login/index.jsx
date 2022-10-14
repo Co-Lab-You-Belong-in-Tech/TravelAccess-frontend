@@ -52,14 +52,14 @@ const Login = () => {
             />
 
             <div className=' flex justify-center items-center '>
-              {/* <Link to='Header'> */}
+              <Link to='homepage'>
               <button
                 type='submit'
                 className=' rounded-full border-black border p-2 w-44 '
               >
                 Login
               </button>
-              {/* </Link> */}
+              </Link>
             </div>
 
             <div>
