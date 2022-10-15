@@ -1,0 +1,9 @@
+::placeholder{
+    padding-left: 3px;
+}
+
+@media only screen and (min-width: 768px){
+    .height{
+        height: 100%;
+    }
+}

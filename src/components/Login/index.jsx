@@ -50,11 +50,11 @@ const Login = () => {
               required
             />
 
-            <div className=' flex justify-center items-center '>
+            <div className=' flex justify-center items-center mt-8 '>
               <Link to='homepage'>
                 <button
                   type='submit'
-                  className=' rounded-full border-black border p-2 w-44 '
+                  className=' rounded-full border-black border p-1 w-48 font-bold'
                 >
                   Login
                 </button>
