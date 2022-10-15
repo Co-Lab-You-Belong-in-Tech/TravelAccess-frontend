@@ -43,11 +43,11 @@ const Signup = () => {
 						required
 					/>
 					<input
-						type='number'
-						name='age'
+						type='tel'
+						name='telephone'
 						placeholder='000-000-000'
 						className='mb-5 p-2'
-						value={inputs.age || ''}
+						value={inputs.telephone || ''}
 						onChange={handleChange}
 						required
 					/>
