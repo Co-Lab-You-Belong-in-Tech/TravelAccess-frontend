@@ -1,8 +1,11 @@
 .outerBox {
-  @apply w-4/5 mx-auto;
+  width:1120px;
+  height:320px;
+  margin:0 auto;
+  background-color:#c4c4c4;
 }
 .innerBox {
-  @apply bg-gray-200 text-center py-5 my-2;
+  @apply  py-5 my-2;
 }
 .outerTabs {
   @apply border-b border-gray-800 space-y-20 mb-3 w-full;
@@ -14,9 +17,23 @@
 .tabs {
   @apply flex justify-around items-center;
 }
-.input {
+.formUp{
+    @apply grid gap-3 grid-cols-1 lg:grid-cols-2
+}
+.formDown{
+    @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3 
+} 
+.buttonContainer{
+    @apply flex justify-end items-center mt-3 buttonForm;
+}
+@media only screen and (min-width:768px){
+    .buttonForm{
+        display: none
+    }
+}
+/* .input {
   @apply px-2 py-2;
 }
 .formItem {
   @apply flex flex-col justify-items-start items-start mr-2;
-}
+} */

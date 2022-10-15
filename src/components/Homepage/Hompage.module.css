@@ -16,6 +16,12 @@
 .formDown{
     @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3 
 }
+.homepageInput{
+    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5
+}
+.nextInput{
+    @apply  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5
+}
 .buttonContainer{
     @apply flex justify-end items-center mt-3 buttonForm;
 }
@@ -23,16 +29,7 @@
 .explore{
     @apply flex justify-between items-center my-5;
 }
-.location{
-    position: relative;
-    
-}
-.location1{
-    position: absolute;
-    bottom:12px;
-    padding-left: 10px;
-    left:150px;
-}
+
 
 @media only screen and (min-width:768px){
     .buttonForm{
