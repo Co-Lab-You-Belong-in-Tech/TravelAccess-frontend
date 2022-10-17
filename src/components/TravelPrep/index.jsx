@@ -1,3 +1,4 @@
+import CheckBox from '../CheckBox';
 import style from './TravelPrep.module.css';
 export const TravelPrep = () => {
   return (
@@ -41,6 +42,38 @@ export const TravelPrep = () => {
         <img src='https://via.placeholder.com/256x360' alt='' />
         <img src='https://via.placeholder.com/256x360' alt='' />
         <img src='https://via.placeholder.com/256x360' alt='' />
+      </div>
+      <div className='flex flex-row gap-5'>
+        <div className='w-[6.5rem]'>
+          <h2>Clothing</h2>
+          <div className='flex flex-row items-center justify-between border-b'>
+            <span>
+              <h3>Trouser</h3>
+            </span>
+            <CheckBox />
+          </div>
+          <div className='flex flex-row items-center justify-between border-b'>
+            <span>
+              <h3>T-shirts</h3>
+            </span>
+            <CheckBox />
+          </div>
+        </div>
+        <div className='w-[6.5rem]'>
+          <h2>Clothing</h2>
+          <div className='flex flex-row items-center justify-between border-b'>
+            <span>
+              <h3>Trouser</h3>
+            </span>
+            <CheckBox />
+          </div>
+          <div className='flex flex-row items-center justify-between border-b'>
+            <span>
+              <h3>T-shirts</h3>
+            </span>
+            <CheckBox />
+          </div>
+        </div>
       </div>
     </div>
   );
