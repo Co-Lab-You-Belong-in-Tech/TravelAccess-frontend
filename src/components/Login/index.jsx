@@ -1,5 +1,5 @@
 import img from '../../assets/signupimg.jpg';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -11,26 +11,6 @@ const Login = () => {
     setEmail('');
     navigate('/dashboard/trip');
   };
-
-  // const login = () => {
-  //   axiosInstance.get('/tokens/create', { email }).then(res => {
-  //     const { data } = res;
-  //     console.log(data);
-  //     navigate('/dashboard');
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   if (localStorage.getItem('token')) {
-  //     navigate('/dashboard');
-  //     // history.push('/dashboard');
-  //   }
-
-  //   return () => {
-  //     login();
-  //   };
-  // }, []);
-  // login();
 
   return (
     <div>
@@ -64,9 +44,9 @@ const Login = () => {
             <div>
               <p className='mt-8'>
                 Don't have an account?{' '}
-                <a href='Signup' className='font-bold'>
+                <Link to='signup' className='font-bold'>
                   Signup
-                </a>
+                </Link>
               </p>
             </div>
           </form>
