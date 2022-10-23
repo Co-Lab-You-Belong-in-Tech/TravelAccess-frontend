@@ -7,62 +7,13 @@ import img1 from '../../assets/signupimg.jpg';
 import img2 from '../../assets/signupimg.jpg';
 import img3 from '../../assets/signupimg.jpg';
 import { MdLocationOn } from 'react-icons/md';
-import res_data from '../../../Test';
+import { FaCalendarTimes } from 'react-icons/fa';
 
 const Homepage = () => {
-  var data = JSON.stringify({
-    currency: 'USD',
-    eapid: 1,
-    locale: 'en_US',
-    siteId: 300000001,
-    propertyId: '9209612',
-    checkInDate: {
-      day: 30,
-      month: 10,
-      year: 2022,
-    },
-    checkOutDate: {
-      day: 14,
-      month: 11,
-      year: 2022,
-    },
-    destination: {
-      coordinates: {
-        latitude: 12.24959,
-        longitude: 109.190704,
-      },
-      regionId: '6054439',
-    },
-    rooms: [
-      {
-        adults: 2,
-        children: [
-          {
-            age: 5,
-          },
-          {
-            age: 7,
-          },
-        ],
-      },
-      {
-        adults: 2,
-        children: [],
-      },
-    ],
-  });
-
-  res_data(data);
-
-  // offers.map(offer => (
-  //   <div>
-  //     <h1>{offer.unit}</h1>
-  //   </div>
-  // ));
   return (
     <div>
       <Header />
-      <main className={style.containerHomepage}>
+      <div className={style.containerHomepage}>
         <div className={style.homepageInnerTabs}>
           <ul className={style.homepageTabs}>
             <li className={style.links}>Flights</li>
@@ -85,9 +36,9 @@ const Homepage = () => {
                   >
                     From
                   </label>
-                  <div className='relative mb-6'>
+                  <div className='relative'>
                     <div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
-                      <MdLocationOn />
+                      <MdLocationOn className='text-primary w-25' />
                     </div>
                     <input
                       type='text'
@@ -107,7 +58,7 @@ const Homepage = () => {
                   </label>
                   <div className='relative mb-6'>
                     <div className='flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none'>
-                      <MdLocationOn />
+                      <MdLocationOn className='text-primary w-25' />
                     </div>
                     <input
                       type='text'
@@ -169,7 +120,7 @@ const Homepage = () => {
               <div className={style.buttonContainer}>
                 <button
                   type='submit'
-                  className='rounded-full border-black border p-1 w-44'
+                  className='rounded-full text-white bg-tertiary border p-1 w-44'
                 >
                   Search
                 </button>
@@ -177,36 +128,40 @@ const Homepage = () => {
             </form>
           </div>
         </section>
-      </main>
+      </div>
       <div className=' border-gray-400 border-b-2 mt-2 '></div>
-      <section className='container mx-auto p-1'>
-        <div className={style.explore}>
-          <h4>Explore Destination</h4>
-          <h4>view all</h4>
-        </div>
-        <div className='grid gap-1 grid-cols-2'>
-          <div>
-            <img
-              src='https://via.placeholder.com/541x167'
-              alt='placeholder picture 1'
-            />
+      <div className={style.containerExplore}>
+        <section className='container mx-auto p-1'>
+          <div className={style.explore}>
+            <h4 className={style.exploreDestinations}>Explore Destination</h4>
+            <h4>view all</h4>
           </div>
-          <div>
-            <img
-              src='https://via.placeholder.com/541x167'
-              alt='placeholder picture 1'
-            />
+          <div className='grid grid-cols-2 gap-3'>
+            <div>
+              <img
+                src='src/assets/Images/Miami explore 1x.png'
+                alt='Miami, Florida'
+              />
+              <p>Miami, Florida</p>
+            </div>
+            <div>
+              <img
+                src='src/assets/Images/New York explore 1x.png'
+                alt='New York, New York'
+              />
+              <p>New York City</p>
+            </div>
           </div>
-        </div>
-        <div className='grid grid-cols-1'>
-          <div className='mt-6 flex justify-center items-center'>
-            <img
-              src='https://via.placeholder.com/924x240'
-              alt='placeholder picture 1'
-            />
+          <div className={style.bottomImg}>
+            <div className='mt-6 flex justify-center items-center'>
+              <img
+                src='https://via.placeholder.com/924x240'
+                alt='placeholder picture 1'
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <Footer />
     </div>
   );

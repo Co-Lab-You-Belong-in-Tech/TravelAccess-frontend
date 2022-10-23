@@ -11,13 +11,9 @@ const res_data = async data => {
     },
     data: data,
   };
-  axios(config)
-    .then(function (response) {
-      console.log(response.data);
-      return response.data;
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  const res = await axios(config).catch(function (error) {
+    console.log(error);
+  });
+  return res.data;
 };
 export default res_data;

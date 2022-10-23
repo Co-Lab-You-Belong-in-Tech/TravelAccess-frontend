@@ -4,7 +4,7 @@ import style from './CheckList.module.css';
 const CheckList = () => {
   return (
     <div className={style.outerBox}>
-      <div className='flex flex-row justify-center'>
+      <div className='flex flex-row justify-center bg-[url("../../../src/ssets/UI Elements/Checlist_box and_line.svg")] '>
         <h2 className='font-extrabold text-xl'>Destination: &nbsp;</h2>
         <span className='text-lg'> Seoul, South Korea.</span>
       </div>

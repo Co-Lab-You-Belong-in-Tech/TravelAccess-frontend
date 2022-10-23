@@ -1,38 +1,52 @@
-.containerHomepage{
-    @apply container mx-auto bg-gray-200 mt-8 lg:p-4;
-}
-.homepageTabs{
-    @apply flex  justify-around items-center
-}
-.links{
-    @apply  hover:border-gray-800 border-b-2 my-3;
+.containerHomepage {
+  @apply rounded-xl border-2 border-[#0F7173] m-5 lg:mx-[5.5rem];
 }
 .homepageInnerTabs {
-    @apply border-b border-gray-400 w-full;
+  @apply bg-[#117E81] rounded-t text-white;
 }
-.formUp{
-    @apply grid gap-3 grid-cols-1 lg:grid-cols-2
+.homepageTabs {
+  @apply flex  justify-around items-center;
 }
-.formDown{
-    @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3 
+.links {
+  @apply hover:border-gray-800 border-b-2 my-3;
 }
-.homepageInput{
-    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5
+.formUp {
+  @apply grid gap-3 grid-cols-1 lg:grid-cols-2;
 }
-.nextInput{
-    @apply  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5
+.formDown {
+  @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3;
 }
-.buttonContainer{
-    @apply flex justify-end items-center mt-3 buttonForm;
+.homepageInput {
+  @apply bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5;
+}
+.nextInput {
+  @apply bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5;
+}
+.buttonContainer {
+  @apply flex justify-end items-center mt-3 buttonForm;
 }
 
-.explore{
-    @apply flex justify-between items-center my-5;
+.explore {
+  @apply flex justify-between items-center my-5 text-[#0F7173];
+}
+.exploreDestinations {
+  @apply font-bold text-xl;
+}
+.containerExplore {
+  @apply m-5;
+}
+p {
+  @apply text-sm;
 }
 
+@media only screen and (min-width: 768px) {
+  .buttonForm {
+    display: none;
+  }
+}
 
-@media only screen and (min-width:768px){
-    .buttonForm{
-        display: none
-    }
+@media screen and (max-width: 768px) {
+  .bottomImg {
+    display: none;
+  }
 }

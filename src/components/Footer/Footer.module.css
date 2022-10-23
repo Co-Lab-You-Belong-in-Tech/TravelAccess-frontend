@@ -1,15 +1,18 @@
 .footerBackground {
-  background-color: #c4c4c4;
-  padding: 20px;
-  margin-top: 20px;
+  @apply bg-[#0F7173] text-white;
 }
 .footerContent {
-  @apply text-center lg:flex justify-between items-center w-[90%] lg:w-[80%] mx-auto;
+  @apply text-center lg:flex justify-between items-end w-[90%] lg:w-[80%] mx-auto;
 }
 .footerList {
   @apply mb-2;
 }
 @media only screen and (max-width: 600px) {
+  .footerBackground {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
   .footerBackground {
     display: none;
   }
