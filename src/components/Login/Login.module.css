@@ -1,0 +1,19 @@
+/* .wrapper{
+    background-image: url('../../assets/Images/Air-balloon-1x.png');
+    background-position: center;
+    height:100vh;
+    
+}
+     */
+/* .loginContainer{
+    @apply container mx-auto flex flex-col justify-center items-center;
+    
+} */
+.baseView {
+    background: url('src/assets/Images/Air balloon 1x.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}

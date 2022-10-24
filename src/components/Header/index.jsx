@@ -3,27 +3,28 @@ import { Link } from 'react-router-dom';
 import style from './Header.module.css';
 const Header = () => {
   return (
-    <div>
-      <div className={style.wrapper}>
-        <div className={style.mainHeader}>
-          <div>
-            <h2 className='font-semibold'>
-              <Link to='/'>
-                <img
-                  src='src/assets/Travel Access Logo.svg'
-                  alt='Travel Access Logo'
-                  className='w-40'
-                />
-              </Link>
-            </h2>
-          </div>
-          <div className={style.left}>
-            {/* <h4>
+		<div>
+			<div className={style.wrapper}>
+				<div className={style.mainHeader}>
+					<div>
+						<h2 className='font-semibold'>
+							<Link to='/'>
+								<img
+									src='src/assets/Travel Access Logo.svg'
+									alt='Travel Access Logo'
+									className='w-40'
+								/>
+							</Link>
+						</h2>
+					</div>
+					<div className={style.left}>
+						{/* <h4>
               <Link to='/dashboard/trip'>My Trip</Link>{' '}
             </h4> */}
-            <div>
-              <FaUserCircle className='text-primary w-5 h-5' />
-              {/* <svg
+						<Link to='/dashboard'>
+							<div>
+								<FaUserCircle className='text-primary w-5 h-5' />
+								{/* <svg
                 width='24'
                 height='24'
                 viewBox='0 0 24 24'
@@ -42,12 +43,13 @@ const Header = () => {
                   </clipPath>
                 </defs>
               </svg> */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+							</div>
+						</Link>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Header;

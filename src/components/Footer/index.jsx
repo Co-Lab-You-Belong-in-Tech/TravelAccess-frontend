@@ -11,7 +11,7 @@ const index = () => {
         <ul>
           <li className={style.footerList}>About</li>
           <li className={style.footerList}>Contact</li>
-          <li>Feedback</li>
+         
         </ul>
       </div>
     </footer>
