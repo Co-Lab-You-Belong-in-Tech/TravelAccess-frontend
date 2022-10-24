@@ -1,11 +1,11 @@
 .outerBox {
-  width:1120px;
-  height:320px;
-  margin:0 auto;
-  background-color:#c4c4c4;
+  width: 1120px;
+  height: 320px;
+  margin: 0 auto;
+  background-color: #c4c4c4;
 }
 .innerBox {
-  @apply  py-5 my-2;
+  @apply py-5 my-2;
 }
 .outerTabs {
   @apply border-b border-gray-800 space-y-20 mb-3 w-full;
@@ -17,23 +17,75 @@
 .tabs {
   @apply flex justify-around items-center;
 }
-.formUp{
-    @apply grid gap-3 grid-cols-1 lg:grid-cols-2
+.formUp {
+  @apply grid gap-3 grid-cols-1 lg:grid-cols-2;
 }
-.formDown{
-    @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3 
-} 
-.buttonContainer{
-    @apply flex justify-end items-center mt-3 buttonForm;
+.formDown {
+  @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3;
 }
-@media only screen and (min-width:768px){
-    .buttonForm{
-        display: none
-    }
+.buttonContainer {
+  @apply flex justify-end items-center mt-3 buttonForm;
 }
-/* .input {
-  @apply px-2 py-2;
+
+h3 {
+  padding: 0.5rem 0;
 }
-.formItem {
-  @apply flex flex-col justify-items-start items-start mr-2;
-} */
+a {
+  @apply hover:font-bold;
+}
+.containerHomepage {
+  @apply rounded-xl border-2 border-[#0F7173] m-5 lg:mx-[5.5rem];
+}
+.homepageInnerTabs {
+  @apply bg-[#117E81] rounded-t text-white;
+}
+.homepageTabs {
+  @apply flex  justify-around items-center;
+}
+.links {
+  @apply hover:border-gray-800 border-b-2 my-3;
+}
+.formUp {
+  @apply grid gap-3 grid-cols-1 lg:grid-cols-2;
+}
+.formDown {
+  @apply grid gap-3 grid-cols-2 lg:grid-cols-4 mt-3;
+}
+.homepageInput {
+  @apply bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5;
+}
+.nextInput {
+  @apply bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5;
+}
+.buttonContainer {
+  @apply flex justify-end items-center mt-3 buttonForm;
+}
+.upcomingDashboard {
+  @apply m-5 lg:mx-[5.5rem];
+}
+.cardContainer {
+  @apply flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl;
+}
+.cardImage {
+  @apply object-cover w-1/2 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg  h-full;
+}
+.text {
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .buttonForm,
+  .upcomimgText {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bottomImg {
+    display: none;
+  }
+  .cardContainer {
+    @apply flex flex-row;
+  }
+  .text {
+    font-size: 12px;
+  }
+}

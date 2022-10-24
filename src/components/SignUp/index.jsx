@@ -1,77 +1,94 @@
 import { FaRegUserCircle } from 'react-icons/fa';
-import img from '../../assets/signupimg.jpg';
 import { useState } from 'react';
 import style from './Signup.module.css';
 import baseStyle from '../Login/Login.module.css';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
-	const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState({});
 
-	const handleChange = (event) => {
-		const { name, value } = event.target;
-		setInputs((values) => ({ ...values, [name]: value }));
-	};
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setInputs(values => ({ ...values, [name]: value }));
+  };
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-		console.log(inputs);
-	};
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(inputs);
+  };
 
-	return (
-		<section className={baseStyle.baseView}>
-			<div className='bg-gray-200 w-1/2'>
-				<form
-					onSubmit={handleSubmit}
-					className='flex flex-col  p-5 text-center '>
-					<h2 className='mb-3 font-bold lg:text-3xl'>Welcome</h2>
-					<input
-						type='text'
-						name='fullname'
-						placeholder='Jane Doe'
-						className='mb-5 p-2'
-						value={inputs.fullname || ''}
-						onChange={handleChange}
-						required
-					/>
-					<input
-						type='email'
-						name='email'
-						placeholder='janedoe@gmail.com'
-						className='mb-5 p-2'
-						value={inputs.email || ''}
-						onChange={handleChange}
-						required
-					/>
-					<input
-						type='tel'
-						name='telephone'
-						placeholder='000-000-000'
-						className='mb-5 p-2'
-						value={inputs.telephone || ''}
-						onChange={handleChange}
-						required
-					/>
-					<div className=' flex justify-center items-center mt-8 '>
-						<div>
-							<button
-								type='submit'
-								className=' rounded-full border-black border p-1 w-48 font-bold '>
-								signup
-							</button>
-						</div>
-					</div>
-					<div>
-						<p className='mt-8'>
-							Have an account?{' '}
-							<a href='/' className='font-bold'>
-								Login
-							</a>
-						</p>
-					</div>
-				</form>
-			</div>
-		</section>
-	);
+  return (
+    <section className={baseStyle.baseView}>
+      <div className='bg-gray-200 w-1/2'>
+        <form
+          onSubmit={handleSubmit}
+          className='flex flex-col  p-5 text-center '
+        >
+          <h2 className='mb-3 font-bold lg:text-3xl'>Welcome</h2>
+          <div class='relative w-full grid'>
+            <input
+              type='text'
+              id='floating_filled'
+              class='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              placeholder=' '
+            />
+            <label
+              for='floating_filled'
+              class='absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-[#0F7173] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4'
+            >
+              Name
+            </label>
+          </div>
+          <div class='relative w-full grid my-3'>
+            <input
+              type='email'
+              id='floating_filled'
+              class='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              placeholder=' '
+            />
+            <label
+              for='floating_filled'
+              class='absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-[#0F7173] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4'
+            >
+              Email
+            </label>
+          </div>
+          <div class='relative w-full grid'>
+            <input
+              type='number'
+              id='floating_filled'
+              class='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              placeholder=' '
+            />
+            <label
+              for='floating_filled'
+              class='absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-[#0F7173] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4'
+            >
+              Phone Number
+            </label>
+          </div>
+          <div className=' flex justify-center items-center mt-8 '>
+            <div>
+              <button
+                type='submit'
+                className=' rounded-full bg-[#5451D6] text-white p-1 w-48 font-bold '
+              >
+                signup
+              </button>
+            </div>
+          </div>
+          <div>
+            <p className='mt-8 text-primary'>
+              Have an account?{' '}
+              <Link to='/' className='font-bold'>
+                Login
+              </Link>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
 };
 
 export default Signup;

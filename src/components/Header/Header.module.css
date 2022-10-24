@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .mainHeader {
-  @apply flex flex-row justify-between my-2 container mx-auto;
+  @apply flex flex-row justify-between px-5 container;
 }
 .left {
   @apply flex items-center justify-between gap-2;
