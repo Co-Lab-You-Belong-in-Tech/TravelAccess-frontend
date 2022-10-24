@@ -2,6 +2,7 @@ import { FaRegUserCircle } from 'react-icons/fa';
 import img from '../../assets/signupimg.jpg';
 import { useState } from 'react';
 import style from './Signup.module.css';
+import baseStyle from '../Login/Login.module.css';
 
 const Signup = () => {
   const [inputs, setInputs] = useState({});
@@ -17,8 +18,8 @@ const Signup = () => {
   };
 
   return (
-    <section className='container mx-auto mt-16 '>
-      <div className='bg-gray-200 lg:grid grid-cols-2'>
+    <section className={baseStyle.baseView}>
+      <div className='bg-gray-200 w-1/2'>
         <form
           onSubmit={handleSubmit}
           className='flex flex-col  p-5 text-center '
@@ -70,9 +71,6 @@ const Signup = () => {
             </p>
           </div>
         </form>
-        <div className='signupImg'>
-          <img src={img} alt='img' className={style.height} />
-        </div>
       </div>
     </section>
   );
