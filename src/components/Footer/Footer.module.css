@@ -1,5 +1,5 @@
 .footerBackground {
-  @apply bg-[#0F7173] text-white;
+  @apply bg-[#0F7173] text-white pt-3;
 }
 .footerContent {
   @apply text-center lg:flex justify-between items-end w-[90%] lg:w-[80%] mx-auto;

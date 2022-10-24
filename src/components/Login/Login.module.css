@@ -1,0 +1,11 @@
+.wrapper{
+    background-image: url('../../assets/Images/Air-balloon-1x.png');
+    background-position: center;
+    height:100vh;
+    
+}
+    
+.loginContainer{
+    @apply container mx-auto flex flex-col justify-center items-center;
+    
+}

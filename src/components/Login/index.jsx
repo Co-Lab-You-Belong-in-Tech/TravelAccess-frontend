@@ -1,6 +1,7 @@
 import img from '../../assets/signupimg.jpg';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import style from '../Login/Login.module.css'
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,18 +14,18 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <section className='container mx-auto mt-16 '>
-        <div className='bg-gray-200 lg:grid grid-cols-2'>
+    <div className={style.wrapper}>
+      <section className={style.loginContainer}>
+        <div className='bg-white lg:w-4/6 mt-12'>
           <form
             onSubmit={handleSubmit}
-            className='flex flex-col  p-7 text-center '
+            className='flex flex-col  p-10 justify-center items-center  '
           >
             <h2 className='mb-3 font-bold lg:text-3xl'>Welcome</h2>
             <input
               type='email'
               placeholder='janedoe@gmail.com'
-              className='mb-7 p-3'
+              className='mb-7 p-3 border border-green-400 w-full'
               value={email}
               onChange={e => setEmail(e.target.value)}
               required
@@ -50,12 +51,7 @@ const Login = () => {
               </p>
             </div>
           </form>
-          <div className='loginImg'>
-            <img
-              src='https://via.placeholder.com/1120x584'
-              alt='placeholder picture 1'
-            />
-          </div>
+          
         </div>
       </section>
     </div>
