@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 const Signup = () => {
   const [inputs, setInputs] = useState({});
+  const { name, email, phone } = inputs;
 
   const handleChange = event => {
     const { name, value } = event.target;
@@ -28,7 +29,10 @@ const Signup = () => {
           <div className='relative w-full grid'>
             <input
               type='text'
+              name='name'
+              value={name}
               id='floating_filled'
+              onChange={handleChange}
               className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
             />
@@ -42,7 +46,10 @@ const Signup = () => {
           <div className='relative w-full grid my-3'>
             <input
               type='email'
+              name='email'
+              value={email}
               id='floating_filled'
+              onChange={handleChange}
               className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
             />
@@ -56,7 +63,10 @@ const Signup = () => {
           <div className='relative w-full grid'>
             <input
               type='number'
+              name='phone'
+              value={phone}
               id='floating_filled'
+              onChange={handleChange}
               className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
             />

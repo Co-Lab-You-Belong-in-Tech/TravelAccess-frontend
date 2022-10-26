@@ -1,4 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axiosInstance from '../../helper/axios';
+
+export const fetchChecklist = createAsyncThunk(
+  'checklist/fetchChecklist',
+  async () => {
+    try {
+      const response = await axiosInstance.get('/api/check_list');
+      return response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+);
 
 export const checkListSlice = createSlice({
   name: 'checklist',
@@ -8,16 +21,23 @@ export const checkListSlice = createSlice({
   },
   reducers: {
     addItem: (state, actions) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
       state.checklist.push(actions.payload);
     },
     removeItem: (state, actions) => {
       state.checklist = state.checklist.filter(
         item => item.id !== actions.payload.id
       );
+    },
+  },
+  extraReducers: {
+    [fetchChecklist.fulfilled]: (state, action) => {
+      return { ...state, checklist: action.payload };
+    },
+    [fetchChecklist.rejected]: (state, action) => {
+      console.log('user Login Rejected');
+    },
+    [fetchChecklist.pending]: (state, action) => {
+      console.log('user Login Pending');
     },
   },
 });

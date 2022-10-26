@@ -1,7 +1,19 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchChecklist } from '../../features/checklist';
 import CheckBox from '../CheckBox';
 import style from './CheckList.module.css';
+import { useSelector } from 'react-redux';
+import { transform } from '../../helper/ObjectTransform';
 
 const CheckList = () => {
+  const checklist = useSelector(state => state.checklists);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchChecklist());
+  }, [dispatch]);
+
   return (
     <div className={style.outerBox}>
       <div className='flex flex-row justify-center bg-[url("../../../src/ssets/UI Elements/Checlist_box and_line.svg")] '>

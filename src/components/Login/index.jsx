@@ -8,12 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState(false);
   const { token } = useSelector(state => state.auth);
-
-  // if (isAuthenticated) {
-  //   navigate('/dashboard/trip');
-  // }
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -25,7 +20,7 @@ const Login = () => {
     const { value } = event.target;
     setEmail(value);
   };
-  // console.log(token);
+
   if (token !== null) {
     const my_token = JSON.stringify(token);
     localStorage.setItem('token', my_token);
