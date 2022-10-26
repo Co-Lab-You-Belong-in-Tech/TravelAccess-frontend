@@ -20,7 +20,7 @@ const Signup = () => {
 
   return (
     <section className={baseStyle.baseView}>
-      <div className='bg-gray-200 lg:w-1/2'>
+      <div className='bg-white lg:w-1/2'>
         <form
           onSubmit={handleSubmit}
           className='flex flex-col  p-5 text-center '
