@@ -20,13 +20,13 @@ const Signup = () => {
 
   return (
     <section className={baseStyle.baseView}>
-      <div className='bg-gray-200 w-1/2'>
+      <div className='bg-gray-200 lg:w-1/2'>
         <form
           onSubmit={handleSubmit}
           className='flex flex-col  p-5 text-center '
         >
-          <h2 className='mb-3 font-bold lg:text-3xl'>Welcome</h2>
-          <div className='relative w-full grid'>
+          <h2 className='mb-3 font-bold text-primary lg:text-3xl'>Welcome</h2>
+          <div className='relative grid'>
             <input
               type='text'
               name='name'
