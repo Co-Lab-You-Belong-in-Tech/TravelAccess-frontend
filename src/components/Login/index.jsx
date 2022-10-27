@@ -1,14 +1,21 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { loginUser } from '../../features/auth';
 import style from '../Login/Login.module.css';
+import AuthContext from '../../context/AuthProvider';
 
 const Login = () => {
+  const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const { token } = useSelector(state => state.auth);
+
+  const handleChange = event => {
+    const { value } = event.target;
+    setEmail(value);
+  };
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -16,16 +23,12 @@ const Login = () => {
     setEmail('');
   };
 
-  const handleChange = event => {
-    const { value } = event.target;
-    setEmail(value);
-  };
-
-  if (token !== null) {
-    const my_token = JSON.stringify(token);
-    localStorage.setItem('token', my_token);
-    navigate('/dashboard/trip');
-  }
+  useEffect(() => {
+    if (token) {
+      setAuth(token);
+      navigate('/homepage');
+    }
+  }, [token]);
 
   return (
     <section className={style.baseView}>
@@ -40,6 +43,7 @@ const Login = () => {
               className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
               onChange={handleChange}
+              required
             />
             <label
               htmlFor='floating_filled'

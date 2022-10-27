@@ -1,13 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axiosInstance from '../../helper/axios';
+import print from '../../helper/print';
 
 export const loginUser = createAsyncThunk('auth/loginUser', async email => {
   try {
     const response = await axiosInstance.post('/auth/login', { email: email });
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
-    console.log(error);
+    print(error.response.data.message);
   }
 });
 
@@ -26,7 +27,6 @@ export const authSlice = createSlice({
     logout: state => {
       state.user = null;
       state.email = null;
-      state.error = null;
     },
   },
   extraReducers: {
