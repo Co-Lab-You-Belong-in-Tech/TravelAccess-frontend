@@ -63,7 +63,7 @@ const Signup = () => {
           <div className='relative w-full grid'>
             <input
               type='number'
-              name='phone'
+              name='tel'
               value={phone}
               id='floating_filled'
               onChange={handleChange}

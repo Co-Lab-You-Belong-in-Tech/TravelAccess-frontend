@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseURL = import.meta.env.VITE_BACKEND_URL;
 const headers = {};
-if (localStorage.token) {
+if (localStorage.getItem('token')) {
   headers.Authorization = `Bearer ${JSON.parse(localStorage.token)}`;
 }
 const axiosInstance = axios.create({

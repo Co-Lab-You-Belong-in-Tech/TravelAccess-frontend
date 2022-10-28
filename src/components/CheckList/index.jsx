@@ -9,6 +9,7 @@ import { transform } from '../../helper/ObjectTransform';
 const CheckList = () => {
   const checklist = useSelector(state => state.checklists);
   const dispatch = useDispatch();
+  console.log(checklist);
 
   useEffect(() => {
     dispatch(fetchChecklist());

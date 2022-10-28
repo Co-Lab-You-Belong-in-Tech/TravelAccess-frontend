@@ -6,7 +6,7 @@ import { MdLocationOn } from 'react-icons/md';
 const Homepage = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className={style.containerHomepage}>
         <div className={style.homepageInnerTabs}>
           <ul className={style.homepageTabs}>

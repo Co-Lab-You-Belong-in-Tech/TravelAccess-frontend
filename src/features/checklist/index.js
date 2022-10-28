@@ -8,7 +8,7 @@ export const fetchChecklist = createAsyncThunk(
       const response = await axiosInstance.get('/api/check_list');
       return response.data;
     } catch (error) {
-      console.log(error);
+      return error.response.data.message;
     }
   }
 );
