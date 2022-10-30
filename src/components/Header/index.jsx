@@ -18,7 +18,7 @@ const Header = () => {
             <h2 className='font-semibold'>
               <Link to='/homepage'>
                 <img
-                  src='src/assets/Travel Access Logo.svg'
+                  src='../../assets/Travel Access Logo.svg'
                   alt='Travel Access Logo'
                   className='w-40'
                 />

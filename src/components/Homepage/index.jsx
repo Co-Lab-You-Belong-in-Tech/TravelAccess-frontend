@@ -134,7 +134,7 @@ const Homepage = () => {
           <div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
             <div>
               <img
-                src='/src/assets/Images/Miami explore 2x.png'
+                src='../../assets/Images/Miami explore 1x.png'
                 alt='Miami, Florida'
                 className='lg:h-52'
               />
@@ -142,7 +142,7 @@ const Homepage = () => {
             </div>
             <div>
               <img
-                src='src/assets/Images/New York explore 2x.png'
+                src='../../assets/Images/New York explore 1x.png'
                 alt='New York, New York'
                 className='lg:h-52'
               />
@@ -151,7 +151,7 @@ const Homepage = () => {
             <div className={style.bottomImg}>
               <div className='flex flex-col '>
                 <img
-                  src='/src/assets/Images/London explore 2x.png'
+                  src='../../assets/Images/London explore 1x.png'
                   alt='London, United Kingdom'
                   className='lg:h-52'
                 />

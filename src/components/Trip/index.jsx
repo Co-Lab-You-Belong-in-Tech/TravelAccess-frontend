@@ -130,7 +130,7 @@ export const Trip = () => {
 					<div className={style.cardContainer}>
 						<img
 							className={style.cardImage}
-							src='/src/assets/Images/Seoul upcoming trip 1x.png'
+							src='../../assets/Images/Seoul upcoming trip 1x.png'
 							alt='seoul'
 						/>
 						<div className='flex flex-col justify-between p-4 leading-normal'>
@@ -159,8 +159,8 @@ export const Trip = () => {
 					<div className={style.cardContainer}>
 						<img
 							className={style.cardImage}
-							src='/src/assets/Images/LA upcoming trip 1x.png'
-							alt='seoul'
+							src='../../assets/Images/LA upcoming trip 1x.png'
+							alt='LA'
 						/>
 						<div className='flex flex-col justify-between p-4 leading-normal'>
 							content here
@@ -176,7 +176,7 @@ export const Trip = () => {
 				<div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
 					<div>
 						<img
-							src='/src/assets/Images/Namsan tower discover 1x.png'
+							src='../../assets/Images/Namsan tower discover 1x.png'
 							alt='Namsan Tower'
 							className='lg:h-52'
 						/>
@@ -184,7 +184,7 @@ export const Trip = () => {
 					</div>
 					<div>
 						<img
-							src='/src/assets/Images/Bukchon Hanok Village discover 1x.png'
+							src='../../assets/Images/Bukchon Hanok Village discover 1x.png'
 							alt='Bukchon Hanok Village'
 							className='lg:h-52'
 						/>
@@ -193,7 +193,7 @@ export const Trip = () => {
 					<div className={style.bottomImg}>
 						<div className='flex flex-col '>
 							<img
-								src='/src/assets/Images/Lotte World discover 1x.png'
+								src='../../assets/Images/Lotte World discover 1x.png'
 								alt='Lotte World'
 								className='lg:h-52'
 							/>

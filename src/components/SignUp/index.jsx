@@ -1,7 +1,7 @@
 import { FaRegUserCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import style from './Signup.module.css';
-import baseStyle from '../Login/Login.module.css';
+import baseStyle from '../Login/Login.module.css'
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
