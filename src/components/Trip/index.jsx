@@ -133,27 +133,29 @@ export const Trip = () => {
 							src='../../assets/Images/Seoul upcoming trip 1x.png'
 							alt='seoul'
 						/>
-						<div className='flex flex-col justify-between p-4 leading-normal'>
-							{/* <div className='flex justify-between items-center'>
+						<div className='flex justify-between p-4 leading-normal'>
+							<div className='flex flex-col'>
 								<div>
 									<MdLocationOn className='text-primary w-25' />
-									<div className='text-xs'>
-										<h3 className='font-bold'>Destination: </h3>
-										<p> Seoul, South Korea</p>
-									</div>
+									<FaRegCalendarTimes className='text-primary w-25' />
+									<FaUser className='text-primary w-25' />
+									<FaPlane className='text-primary w-25' />
 								</div>
 							</div>
-
-							<div>
-								<FaRegCalendarTimes className='text-primary w-25' />
+							<div className='flex flex-col'>
+								<div>
+									<h3 className='font-bold'>Destination: </h3>
+									<p> Seoul, South Korea</p>
+								</div>
+								<div>
+									<h3 className='font-bold'>Destination: </h3>
+									<p> Seoul, South Korea</p>
+								</div>
+								<div>
+									<h3 className='font-bold'>Destination: </h3>
+									<p> Seoul, South Korea</p>
+								</div>
 							</div>
-							<div>
-								<FaUser className='text-primary w-25' />
-							</div>
-							<div>
-								<FaPlane className='text-primary w-25' />
-							</div> */}
-              content here
 						</div>
 					</div>
 					<div className={style.cardContainer}>

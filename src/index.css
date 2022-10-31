@@ -5,9 +5,9 @@
 .main-header {
   @apply flex flex-row;
 }
-/* .......................signup img and loginimg for mobile view.............. */
+/* .......................signup img and loginimg for mobile view.............. 
 @media only screen and (max-width:600px){
   .signupImg, .loginImg{
     display:none;
   }
-}
+} */
