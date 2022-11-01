@@ -10,7 +10,7 @@
     
 } */
 .baseView {
-    background: url('/public/assets/Images/Air balloon 1x.png');
+    background: url('/assets/Images/Air balloon 1x.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

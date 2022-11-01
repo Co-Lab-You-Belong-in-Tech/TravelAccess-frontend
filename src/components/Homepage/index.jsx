@@ -132,7 +132,7 @@ const Homepage = () => {
         <section className='container mx-auto p-1'>
           <div className={style.explore}>
             <h4 className={style.exploreDestinations}>Explore Destination</h4>
-            <h4>view all</h4>
+            <h4>View all</h4>
           </div>
           <div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
             <div>
@@ -149,7 +149,7 @@ const Homepage = () => {
                 alt='New York, New York'
                 className='lg:h-52'
               />
-              <p className='mt-2'>New York City</p>
+              <p className='mt-2'>New York City,NY</p>
             </div>
             <div className={style.bottomImg}>
               <div className='flex flex-col '>

@@ -2,7 +2,7 @@ import style from './Trip.module.css';
 import { MdLocationOn } from 'react-icons/md';
 import { FaPlane, FaRegCalendarTimes, FaUser } from 'react-icons/fa';
 
-import TripDetails from '../TripDetails';
+import TripUpcoming from '../TripUpcoming';
 
 export const Trip = () => {
   return (
@@ -130,66 +130,11 @@ export const Trip = () => {
           <h4 className='font-bold'>Upcoming</h4>
           <h4 className={style.upcomimgText}>View All</h4>
         </div>
-
-        <div className='grid gap-3 grid-col-3'>
-          <div className={style.cardContainer}>
-            <img
-              className={style.cardImage}
-              src='../../assets/Images/Seoul upcoming trip 1x.png'
-              alt='seoul'
-            />
-            <div className='flex justify-between p-4 leading-normal'>
-              <div className='flex flex-col'>
-                <div className={style.icons}>
-                  <div>
-                    <MdLocationOn className={style.icon} />
-                  </div>
-                  <div>
-                    <h5 className='font-bold'>Destination: </h5>
-                    <p> Seoul, South Korea</p>
-                  </div>
-                </div>
-                <div className={style.icons}>
-                  <div>
-                    <FaRegCalendarTimes className={style.icon} />
-                  </div>
-                  <div>
-                    <h3 className='font-bold'>Flight Dates: </h3>
-                    <p>12/10/22 - 12/30/22</p>
-                  </div>
-                </div>
-                <div className={style.icons}>
-                  <div>
-                    <FaUser className={style.icon} />
-                  </div>
-                  <div>
-                    <h3 className='font-bold'>No. of travelers: </h3>
-                    <p>2 Adults</p>
-                  </div>
-                </div>
-                <div className={style.icons}>
-                  <div>
-                    <FaPlane className={style.icon} />
-                  </div>
-                  <div>
-                    <h3 className='font-bold'>AirLine: </h3>
-                    <p>Korea Air</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={style.cardContainer}>
-            <img
-              className={style.cardImage}
-              src='../../assets/Images/LA upcoming trip 1x.png'
-              alt='LA'
-            />
-            <div className='flex flex-col justify-between p-4 leading-normal'>
-              content here
-            </div>
-          </div>
+        <div>
+          <TripUpcoming/>
         </div>
+
+        
         <section className='mt-6'>
           <div className='text-primary mb-4 flex justify-between items-center'>
             <h4 className='font-bold'>Discover</h4>
