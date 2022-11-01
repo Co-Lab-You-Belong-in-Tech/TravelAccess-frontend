@@ -1,7 +1,7 @@
 import { FaRegUserCircle } from 'react-icons/fa';
 import { useState } from 'react';
 import style from './Signup.module.css';
-import baseStyle from '../Login/Login.module.css'
+import baseStyle from '../Login/Login.module.css';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
@@ -62,8 +62,8 @@ const Signup = () => {
           </div>
           <div className='relative w-full grid'>
             <input
-              type='telephone'
-              name='phone'
+              type='number'
+              name='tel'
               value={phone}
               id='floating_filled'
               onChange={handleChange}

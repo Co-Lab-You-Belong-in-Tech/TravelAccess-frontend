@@ -11,6 +11,8 @@ const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const { token } = useSelector(state => state.auth);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const handleChange = event => {
     const { value } = event.target;
@@ -19,17 +21,27 @@ const Login = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(loginUser(email));
+    try {
+      dispatch(loginUser(email));
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
     setEmail('');
   };
 
   useEffect(() => {
     if (token) {
       setAuth(token);
+      localStorage.setItem('token', JSON.stringify(token));
       navigate('/homepage');
     }
   }, [token]);
 
+  loading && <div>Loading...</div>;
+  error && <div>{error}</div>;
   return (
     <section className={style.baseView}>
       <div className='bg-white lg:w-1/2 lg:h-1/2 sm:w-3/4 sm:h-3/4'>
