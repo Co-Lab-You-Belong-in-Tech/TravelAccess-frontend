@@ -2,6 +2,7 @@ import Header from '../Header';
 import Footer from '../Footer';
 import style from './Hompage.module.css';
 import { MdLocationOn } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 const Homepage = () => {
   return (
@@ -10,7 +11,9 @@ const Homepage = () => {
       <div className={style.containerHomepage}>
         <div className={style.homepageInnerTabs}>
           <ul className={style.homepageTabs}>
-            <li className={style.links}>Flights</li>
+            <Link className={style.links} to='#'>
+              <li>Flights</li>
+            </Link>
             <li className={style.links}>Stay</li>
             <li className={style.links}>Bundles</li>
           </ul>

@@ -64,13 +64,19 @@ a {
   @apply m-5 lg:mx-[5.5rem];
 }
 .cardContainer {
-  @apply flex flex-col bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl;
+  @apply flex flex-col w-[450px] mr-4 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl;
 }
 .cardImage {
-  @apply object-cover w-1/2 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg  h-full;
+  @apply object-cover w-1/2 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg;
 }
 .text {
   font-size: 16px;
+}
+.icons {
+  @apply flex justify-between items-center w-full p-3;
+}
+.icon {
+  @apply text-4xl text-primary mr-4;
 }
 @media only screen and (min-width: 768px) {
   .buttonForm,
