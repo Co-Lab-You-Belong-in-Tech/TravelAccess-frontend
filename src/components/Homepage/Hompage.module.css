@@ -31,10 +31,10 @@
   @apply flex justify-between items-center my-5 text-[#0F7173];
 }
 .exploreDestinations {
-  @apply font-bold text-xl;
+  @apply font-bold text-lg;
 }
 .containerExplore {
-  @apply m-5;
+  @apply m-5 lg:mx-[5.5rem];
 }
 p {
   @apply text-sm;
