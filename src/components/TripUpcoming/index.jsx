@@ -1,19 +1,19 @@
 import React from 'react'
 import style from '../Trip/Trip.module.css'
-import calender from '../../../public/assets/Icons/Calendar icon.svg'
-import location from '../../../public/assets/Icons/Pin icon.svg'
-import user from '../../../public/assets/Icons/Traveler icon.svg'
-import plane from '../../../public/assets/Icons/Airplane icon.svg'
+import calender from '/public/assets/Icons/Calendar icon.svg'
+import location from '/public/assets/Icons/Pin icon.svg'
+import user from '/public/assets/Icons/Traveler icon.svg'
+import plane from '/public/assets/Icons/Airplane icon.svg'
 
 
 const TripUpcoming = () => {
 	return (
 		<div>
 			<div className='grid md:grid-cols-2'>
-				<div className={style.cardContainer2}>
+				<div className={style.cardContainer}>
 					<img
 						className={style.cardImage}
-						src='../../assets/Images/LA upcoming trip 1x.png'
+						src='/public/assets/Images/Seoul upcoming trip 1x.png'
 						alt='seoul'
 					/>
 					<div className='flex pl-4'>
@@ -42,7 +42,7 @@ const TripUpcoming = () => {
 								</div>
 								<div className='text-sm ml-10'>
 									<h3 className='font-bold'>No of travelers: </h3>
-									<p>2 Adult</p>
+									<p>1 Adult</p>
 								</div>
 							</div>
 							<div className='flex'>
