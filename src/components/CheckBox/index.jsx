@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 const CheckBox = () => {
   const [checked, setChecked] = useState(false);
-
   return (
     <div>
       <input
@@ -10,7 +9,6 @@ const CheckBox = () => {
         checked={checked}
         onChange={() => setChecked(!checked)}
       />
-      {/* <span>{checked ? 'checked' : 'not checked'}</span> */}
     </div>
   );
 };

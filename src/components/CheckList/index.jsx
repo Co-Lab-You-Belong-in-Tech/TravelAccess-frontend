@@ -4,16 +4,34 @@ import { fetchChecklist } from '../../features/checklist';
 import CheckBox from '../CheckBox';
 import style from './CheckList.module.css';
 import { useSelector } from 'react-redux';
-import { transform } from '../../helper/ObjectTransform';
+import CheckListItem from '../CheckListItem';
 
 const CheckList = () => {
-  const checklist = useSelector(state => state.checklists);
+  const { checklist } = useSelector(state => state.checklists);
   const dispatch = useDispatch();
-  console.log(checklist);
+
+  console.log(checklist.toiletries);
+  // const checklistData = transform(checklist);
+  // console.log(checklistData);
 
   useEffect(() => {
     dispatch(fetchChecklist());
   }, [dispatch]);
+
+  // const checklistItems = checklist.entries( => {
+  //   return <h3>{item[0]}</h3>;
+  // });
+  // const checklistItems = () => {
+  //   for (const [key, value] of Object.entries(checklist)) {
+  //     return <h3>{key}</h3>;
+  //   }
+  // };
+
+  // const displayCheckList = () => {
+  //   checklist.map(item => {
+  //     <CheckListItem checklist={item} />;
+  //   });
+  // };
 
   return (
     <div className={style.outerBox}>
@@ -22,6 +40,7 @@ const CheckList = () => {
         <span className='text-lg'> Seoul, South Korea.</span>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-4 gap-2 md:grid-cols-3 '>
+        {displayCheckList()}
         <div className='w-[7.5rem]'>
           <h3 className='font-bold'>Clothing</h3>
           <div className='flex flex-row items-center justify-between border-b'>
@@ -224,6 +243,7 @@ const CheckList = () => {
           </div>
         </div>
       </div>
+      {/* <div>{checklistItems()}</div> */}
     </div>
   );
 };

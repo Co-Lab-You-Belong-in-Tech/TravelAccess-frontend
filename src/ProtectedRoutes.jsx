@@ -6,7 +6,8 @@ import print from './helper/print';
 //Move useAuth to a separate file
 export const useAuth = () => {
   const { auth } = useContext(AuthContext);
-  if (auth) {
+  const user = JSON.parse(localStorage.getItem('token'));
+  if (auth && user) {
     return true;
   }
   return false;

@@ -10,9 +10,8 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const { token } = useSelector(state => state.auth);
+  const { token, message } = useSelector(state => state.auth);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
 
   const handleChange = event => {
     const { value } = event.target;
@@ -21,15 +20,13 @@ const Login = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    try {
-      dispatch(loginUser(email));
-    } catch (error) {
-      console.log(error);
-      setError(error);
-    } finally {
-      setLoading(false);
-    }
+    dispatch(loginUser(email));
     setEmail('');
+    // setTimeout(() => {
+    //   if (error) {
+    //     return error;
+    //   }
+    // }, 3000);
   };
 
   useEffect(() => {
@@ -37,16 +34,17 @@ const Login = () => {
       setAuth(token);
       localStorage.setItem('token', JSON.stringify(token));
       navigate('/homepage');
+    } else {
+      setError(message);
     }
-  }, [token]);
+  }, [token, message]);
 
-  loading && <div>Loading...</div>;
-  error && <div>{error}</div>;
   return (
     <section className={style.baseView}>
       <div className='bg-white lg:w-1/2 lg:h-1/2 sm:w-3/4 sm:h-3/4'>
         <form onSubmit={handleSubmit} className='grid place-items-center p-10'>
           <h2 className='mb-3 font-bold text-[#0F7173] lg:text-xl'>Welcome</h2>
+          {error && <div>{error}</div>}
           <div className='relative w-full grid'>
             <input
               type='email'
@@ -64,7 +62,6 @@ const Login = () => {
               Email
             </label>
           </div>
-
           <div className=' flex justify-center items-center mt-8 '>
             <button
               type='submit'
@@ -73,7 +70,6 @@ const Login = () => {
               Login
             </button>
           </div>
-
           <div>
             <p className='mt-8 text-primary'>
               Don't have an account?{' '}

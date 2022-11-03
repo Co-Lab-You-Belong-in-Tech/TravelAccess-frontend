@@ -7,7 +7,7 @@ export const loginUser = createAsyncThunk('auth/loginUser', async email => {
     const response = await axiosInstance.post('/auth/login', { email: email });
     return response.data;
   } catch (error) {
-    return error.response.data.message;
+    return error.response.data;
   }
 });
 
@@ -29,15 +29,15 @@ export const authSlice = createSlice({
     },
   },
   extraReducers: {
+    [loginUser.rejected]: (state, action) => {
+      print('user Login Rejected');
+    },
     [loginUser.fulfilled]: (state, action) => {
-      console.log('user Login Fulfilled');
+      print('user Login Fulfilled');
       return { ...state, ...action.payload };
     },
-    [loginUser.rejected]: (state, action) => {
-      console.log('user Login Rejected');
-    },
     [loginUser.pending]: (state, action) => {
-      console.log('user Login Pending');
+      print('user Login Pending');
     },
   },
 });
