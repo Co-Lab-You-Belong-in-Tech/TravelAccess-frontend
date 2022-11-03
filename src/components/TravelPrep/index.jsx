@@ -38,29 +38,31 @@ export const TravelPrep = () => {
       </form>
 
       <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 '>
-        <Link to='/dashboard/checklist/'>
-          {/* <div className='border-1 border-[#0F7173]'> */}
-          <div className='grid place-items-center h-full border-1 border-[#0F7173]'>
+        <div className='border border-[#0F7173]'>
+          <div className='grid place-items-center h-full'>
             <BsPlusLg className='text-4xl text-[#0F7173]' />
           </div>
-          {/* <img
-						src={addChecklistCard}
-						alt={addChecklistCard}
-						className={style.Template}
-					/> */}
-          {/* </div> */}
-        </Link>
+        </div>
         <div className={style.showcase}>
           <div className={style.overlay}>
             <p className='text-white lg:text-2xl'>Seoul</p>
             <p className='text-white lg:text-2xl'>South Korea</p>
           </div>
-          <div>
+          <div className={style.heart}>
+            <img src={like} alt={like} className='like' />
+          </div>
+        </div>
+        <div className={style.showcase}>
+          <div className={style.overlay}>
+            <p className='text-white lg:text-2xl'>Seoul</p>
+            <p className='text-white lg:text-2xl'>South Korea</p>
+          </div>
+          <div className={style.heart}>
             <img src={like} alt={like} className='like' />
           </div>
         </div>
 
-        <div className={style.showcase1}>
+        {/* <div className={style.showcase1}>
           <div className={style.overlay}>
             <p className='text-white lg:text-2xl'>London</p>
             <p className='text-white lg:text-2xl'>United Kingdom</p>
@@ -113,7 +115,7 @@ export const TravelPrep = () => {
           <div>
             <img src={like} alt={like} className='like' />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

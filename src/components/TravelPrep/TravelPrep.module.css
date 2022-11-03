@@ -1,9 +1,9 @@
 .outerBox {
   @apply w-4/5 mx-auto my-3;
 }
-.Template{
+.Template {
   height: 360px;
-  Width:265px;
+  width: 265px;
 }
 
 .showcase {
@@ -12,7 +12,10 @@
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  Width:265px;
+  @apply relative;
+}
+.heart {
+  @apply absolute top-2 right-2;
 }
 .overlay {
   display: flex;
@@ -20,25 +23,24 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.4);
-   height: 360px;
-   Width:265px;
-
+  height: 360px;
+  width: 265px;
 }
 .showcase1 {
   background-image: url('../../assets/Images/London template 2x.png');
   background-repeat: no-repeat;
   background-position: 40% 40%;
   background-size: cover;
-   height: 360px;
-   Width:265px;
+  height: 360px;
+  width: 265px;
 }
 .showcase2 {
   background-image: url('../../assets/Images/NYC template 2x.png');
   background-repeat: no-repeat;
   background-position: 40% 40%;
   background-size: cover;
-   height: 360px;
-   Width:265px;
+  height: 360px;
+  width: 265px;
 }
 .showcase3 {
   background-image: url('../../assets/Images/LA template 2x.png');
@@ -46,7 +48,7 @@
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  Width:265px;
+  width: 265px;
 }
 .showcase4 {
   background-image: url('../../assets/Images/sydney 1x.png');
@@ -54,7 +56,7 @@
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  Width:265px;
+  width: 265px;
 }
 .showcase5 {
   background-image: url('../../assets/Images/Bangkok 2x.png');
@@ -62,7 +64,7 @@
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  Width:265px;
+  width: 265px;
 }
 .showcase6 {
   background-image: url('../../assets/Images/Brazil 2x.png');
@@ -70,53 +72,53 @@
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  Width:265px;
+  width: 265px;
 }
-.like{
+.like {
   position: relative;
-  left:100px;
+  left: 100px;
 }
-.like1{
+.like1 {
   position: absolute;
   left: 100px;
-  top:100px;
+  top: 100px;
 }
 @media only screen and (max-width: 600px) {
-  .Template{
+  .Template {
     height: 286px;
-    width:165px;
+    width: 165px;
   }
   .showcase {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
   .showcase1 {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
   .showcase2 {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
   .showcase3 {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
   .showcase4 {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
   .showcase5 {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
   .showcase6 {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
-  
+
   .overlay {
     height: 286px;
-     width:165px;
+    width: 165px;
   }
 }
