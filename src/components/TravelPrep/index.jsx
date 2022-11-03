@@ -1,10 +1,20 @@
-import { Link } from 'react-router-dom';
 import style from './TravelPrep.module.css';
 import { BsPlusLg } from 'react-icons/bs';
-import addChecklistCard from '../../../public/assets/UI Elements/Cards/Checklist card.svg';
 import like from '../../../public/assets/Icons/Heart filled icon.svg';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTrips } from '../../features/trips';
+import { Link, useParams } from 'react-router-dom';
 
 export const TravelPrep = () => {
+  const { trips } = useSelector(state => state.trips);
+  const dispatch = useDispatch();
+  const params = useParams();
+
+  useEffect(() => {
+    dispatch(fetchTrips());
+  }, [dispatch, trips]);
+
   return (
     <div className={style.outerBox}>
       <form className='flex items-center'>
@@ -43,15 +53,19 @@ export const TravelPrep = () => {
             <BsPlusLg className='text-4xl text-[#0F7173]' />
           </div>
         </div>
-        <div className={style.showcase}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>Seoul</p>
-            <p className='text-white lg:text-2xl'>South Korea</p>
+        <Link to={`/trip/${params.trip_id}`}>
+          {' '}
+          {/* This code to check if workable */}
+          <div className={style.showcase}>
+            <div className={style.overlay}>
+              <p className='text-white lg:text-2xl'>Seoul</p>
+              <p className='text-white lg:text-2xl'>South Korea</p>
+            </div>
+            <div className={style.heart}>
+              <img src={like} alt={like} className='like' />
+            </div>
           </div>
-          <div className={style.heart}>
-            <img src={like} alt={like} className='like' />
-          </div>
-        </div>
+        </Link>
         <div className={style.showcase}>
           <div className={style.overlay}>
             <p className='text-white lg:text-2xl'>Seoul</p>

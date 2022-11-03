@@ -1,20 +1,15 @@
 import { FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import style from './Header.module.css';
-// import AuthContext from '../../context/AuthProvider';
-// import { useContext } from 'react';
+
 import { useAuth } from '../../ProtectedRoutes';
 import print from '../../helper/print';
 
 const Header = () => {
-  // const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const isAuth = useAuth();
-  print(isAuth);
-
   const handleLogout = () => {
     if (isAuth) {
-      // setAuth(null);
       localStorage.removeItem('token');
       navigate('/');
     }

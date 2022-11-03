@@ -5,7 +5,10 @@
 .main-header {
   @apply flex flex-row;
 }
-/* .......................signup img and loginimg for mobile view.............. 
+a {
+  @apply hover:border-b-2 hover:border-[#0F7173];
+}
+/* .......................signup img and loginimg for mobile view..............
 @media only screen and (max-width:600px){
   .signupImg, .loginImg{
     display:none;

@@ -22,11 +22,6 @@ const Login = () => {
     event.preventDefault();
     dispatch(loginUser(email));
     setEmail('');
-    // setTimeout(() => {
-    //   if (error) {
-    //     return error;
-    //   }
-    // }, 3000);
   };
 
   useEffect(() => {
