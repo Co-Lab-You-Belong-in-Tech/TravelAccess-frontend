@@ -5,28 +5,23 @@
   height: 360px;
   width: 265px;
 }
-
-
 .showcase {
   background-image: url('../../assets/Images/Seoul template 2x.png');
   background-repeat: no-repeat;
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  @apply relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:5px; 
+  @apply relative ;
 }
 .heart {
-  @apply absolute top-2 right-2;
+  @apply absolute top-2 right-1;
 }
-.overlay {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 360px;
-  width: 265px;
-}
+
+  
 .showcase1 {
   background-image: url('../../assets/Images/London template 2x.png');
   background-repeat: no-repeat;
@@ -34,56 +29,9 @@
   background-size: cover;
   height: 360px;
   width: 265px;
+
 }
-.showcase2 {
-  background-image: url('../../assets/Images/NYC template 2x.png');
-  background-repeat: no-repeat;
-  background-position: 40% 40%;
-  background-size: cover;
-  height: 360px;
-  width: 265px;
-}
-.showcase3 {
-  background-image: url('../../assets/Images/LA template 2x.png');
-  background-repeat: no-repeat;
-  background-position: 40% 40%;
-  background-size: cover;
-  height: 360px;
-  width: 265px;
-}
-.showcase4 {
-  background-image: url('../../assets/Images/sydney 1x.png');
-  background-repeat: no-repeat;
-  background-position: 40% 40%;
-  background-size: cover;
-  height: 360px;
-  width: 265px;
-}
-.showcase5 {
-  background-image: url('../../assets/Images/Bangkok 2x.png');
-  background-repeat: no-repeat;
-  background-position: 40% 40%;
-  background-size: cover;
-  height: 360px;
-  width: 265px;
-}
-.showcase6 {
-  background-image: url('../../assets/Images/Brazil 2x.png');
-  background-repeat: no-repeat;
-  background-position: 40% 40%;
-  background-size: cover;
-  height: 360px;
-  width: 265px;
-}
-.like {
-  position: relative;
-  left: 100px;
-}
-.like1 {
-  position: absolute;
-  left: 100px;
-  top: 100px;
-}
+
 @media only screen and (max-width: 600px) {
   .Template {
     height: 286px;
@@ -97,27 +45,7 @@
     height: 286px;
     width: 165px;
   }
-  .showcase2 {
-    height: 286px;
-    width: 165px;
-  }
-  .showcase3 {
-    height: 286px;
-    width: 165px;
-  }
-  .showcase4 {
-    height: 286px;
-    width: 165px;
-  }
-  .showcase5 {
-    height: 286px;
-    width: 165px;
-  }
-  .showcase6 {
-    height: 286px;
-    width: 165px;
-  }
-
+  
   .overlay {
     height: 286px;
     width: 165px;

@@ -90,7 +90,7 @@ a {
     display: none;
   }
   .cardContainer {
-    @apply flex flex-row;
+    @apply flex flex-row w-full;
   }
   
 }
