@@ -10,7 +10,6 @@ const CheckList = () => {
   const { checklist } = useSelector(state => state.checklists);
   const dispatch = useDispatch();
 
-  console.log(checklist.toiletries);
   // const checklistData = transform(checklist);
   // console.log(checklistData);
 

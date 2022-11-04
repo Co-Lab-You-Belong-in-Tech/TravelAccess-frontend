@@ -131,10 +131,9 @@ export const Trip = () => {
           <h4 className={style.upcomimgText}>View All</h4>
         </div>
         <div>
-          <TripUpcoming/>
+          <TripUpcoming />
         </div>
 
-        
         <section className='mt-6'>
           <div className='text-primary mb-4 flex justify-between items-center'>
             <h4 className='font-bold'>Discover</h4>
@@ -142,13 +141,13 @@ export const Trip = () => {
           </div>
         </section>
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
-          <div>
+          <div className='flex flex-col justify-start items-start '>
             <img
               src='../../assets/Images/Namsan tower discover 1x.png'
               alt='Namsan Tower'
               className='lg:h-52'
             />
-            <p className='mt-2 text'>Namsan Tower</p>
+            <p className='-mt-2 ml-2 text'>Namsan Tower</p>
           </div>
           <div>
             <img
@@ -156,7 +155,7 @@ export const Trip = () => {
               alt='Bukchon Hanok Village'
               className='lg:h-52'
             />
-            <p className='mt-2 text'>Bukchon Hanok Village</p>
+            <p className='-mt-2 ml-2 text'>Bukchon Hanok Village</p>
           </div>
           <div className={style.bottomImg}>
             <div className='flex flex-col '>
@@ -165,7 +164,7 @@ export const Trip = () => {
                 alt='Lotte World'
                 className='lg:h-52'
               />
-              <p className='mt-2 text'>Lotte World</p>
+              <p className='-mt-2 ml-2 text'>Lotte World</p>
             </div>
           </div>
         </div>

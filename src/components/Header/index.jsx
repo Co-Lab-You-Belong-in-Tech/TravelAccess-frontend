@@ -3,7 +3,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import style from './Header.module.css';
 
 import { useAuth } from '../../ProtectedRoutes';
-import print from '../../helper/print';
 import { logout } from '../../features/auth';
 import { useDispatch } from 'react-redux';
 

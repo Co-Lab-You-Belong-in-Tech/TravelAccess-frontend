@@ -4,7 +4,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import { clearMessage, loginUser } from '../../features/auth';
 import style from '../Login/Login.module.css';
 import AuthContext from '../../context/AuthProvider';
-import print from '../../helper/print';
 
 const Login = () => {
   const { setAuth } = useContext(AuthContext);
@@ -12,6 +11,8 @@ const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const { token, message } = useSelector(state => state.auth);
+
+  const user = localStorage.getItem('token');
 
   const handleChange = event => {
     if (message) dispatch(clearMessage());
@@ -21,24 +22,22 @@ const Login = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    try {
-      dispatch(loginUser(email));
-    } catch (error) {
-      print(error);
-    } finally {
-      setEmail('');
-    }
+    dispatch(loginUser(email));
+
+    setEmail('');
   };
 
   useEffect(() => {
     if (token) {
-      setAuth(token);
       localStorage.setItem('token', JSON.stringify(token));
+      setAuth(token);
+    }
+    if (user) {
       navigate('/homepage');
     } else {
       navigate('/');
     }
-  }, [token, message]);
+  }, [token, user, navigate]);
 
   return (
     <section className={style.baseView}>

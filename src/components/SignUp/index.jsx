@@ -5,7 +5,6 @@ import baseStyle from '../Login/Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearMessage, registerUser } from '../../features/auth';
-import print from '../../helper/print';
 
 const Signup = () => {
   const dispatch = useDispatch();

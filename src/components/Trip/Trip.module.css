@@ -76,7 +76,7 @@ a {
   margin:0;
 }  */
 .icons {
-  @apply flex justify-between items-center pt-1  ;
+  @apply flex  items-center pt-1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -92,10 +92,9 @@ a {
   .cardContainer {
     @apply flex flex-row w-full;
   }
-  
 }
-@media screen and (max-width:600px){
-  .cardContainer2{
+@media screen and (max-width: 600px) {
+  .cardContainer2 {
     display: none;
-  } 
+  }
 }

@@ -14,14 +14,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius:5px; 
-  @apply relative ;
+  border-radius: 5px;
+  @apply relative;
 }
 .heart {
   @apply absolute top-2 right-1;
 }
 
-  
 .showcase1 {
   background-image: url('../../assets/Images/London template 2x.png');
   background-repeat: no-repeat;
@@ -29,7 +28,6 @@
   background-size: cover;
   height: 360px;
   width: 265px;
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -45,7 +43,7 @@
     height: 286px;
     width: 165px;
   }
-  
+
   .overlay {
     height: 286px;
     width: 165px;

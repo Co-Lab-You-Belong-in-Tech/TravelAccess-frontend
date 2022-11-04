@@ -1,20 +1,22 @@
 import style from './TravelPrep.module.css';
 import { BsPlusLg } from 'react-icons/bs';
-
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrips } from '../../features/trips';
-// import { useParams } from 'react-router-dom';
-import Checklistcards from '../checklistCards';
+
+import Checklistcards from '../ChecklistCards';
 
 export const TravelPrep = () => {
   const { trips } = useSelector(state => state.trips);
   const dispatch = useDispatch();
-  const params = useParams();
-  console.log(trips);
+
   useEffect(() => {
     dispatch(fetchTrips());
-  }, []);
+  }, [dispatch]);
+
+  const tripList = trips.map(trip => (
+    <Checklistcards key={trip.id} trip={trip} />
+  ));
 
   return (
     <div className={style.outerBox}>
@@ -49,14 +51,12 @@ export const TravelPrep = () => {
       </form>
 
       <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 '>
-        <div className='border border-[#0F7173]'>
-          <div className='grid place-items-center h-full'>
+        <div className='rounded-md border border-[#0F7173]'>
+          <div className='grid place-items-center h-[360px]'>
             <BsPlusLg className='text-4xl text-[#0F7173]' />
           </div>
         </div>
-        <div>
-          <Checklistcards />
-        </div>
+        <div>{trips && tripList}</div>
       </div>
     </div>
   );
