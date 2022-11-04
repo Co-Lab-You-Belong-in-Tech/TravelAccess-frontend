@@ -1,8 +1,5 @@
 import React from 'react';
 import style from '../Trip/Trip.module.css';
-import { AiOutlineCalendar } from 'react-icons/ai';
-import { TiLocation } from 'react-icons/ti';
-import { HiUser } from 'react-icons/hi';
 import calender from '/public/assets/Icons/Calendar icon.svg';
 import location from '/public/assets/Icons/Pin icon.svg';
 import user from '/public/assets/Icons/Traveler icon.svg';
@@ -19,9 +16,9 @@ const TripUpcoming = () => {
             alt='seoul'
           />
           {/* <div className='flex pl-4'> */}
-          <div className='flex pl-4 flex-col justify-between'>
+          <div className={style.cardText}>
             <div className={style.icons}>
-              <div>
+              <div className={style.img}>
                 <img src={location} alt={location} />
               </div>
               <div className='mx-4'>
@@ -30,7 +27,7 @@ const TripUpcoming = () => {
               </div>
             </div>
             <div className={style.icons}>
-              <div>
+              <div className={style.img}>
                 <img src={calender} alt={user} />
               </div>
               <div className='mx-4'>
@@ -39,7 +36,7 @@ const TripUpcoming = () => {
               </div>
             </div>
             <div className={style.icons}>
-              <div>
+              <div className={style.img}>
                 <img src={user} alt={user} />
               </div>
               <div className='mx-4'>
@@ -48,7 +45,7 @@ const TripUpcoming = () => {
               </div>
             </div>
             <div className={style.icons}>
-              <div>
+              <div className={style.img}>
                 <img src={plane} alt={plane} />
               </div>
               <div className='mx-4'>
@@ -65,46 +62,46 @@ const TripUpcoming = () => {
             src='../../assets/Images/LA upcoming trip 1x.png'
             alt='LA'
           />
-          <div className='flex pl-4'>
-            <div className='flex flex-col justify-between'>
-              <div className={style.icons}>
-                <div>
-                  <img src={location} alt={location} />
-                </div>
-                <div className='ml-4'>
-                  <h3 className='font-bold'>Destination: </h3>
-                  <p> Los Angeles,LA</p>
-                </div>
+          {/* <div className='flex '> */}
+          <div className={style.cardText}>
+            <div className={style.icons}>
+              <div className={style.img}>
+                <img src={location} alt={location} />
               </div>
-              <div className={style.icons}>
-                <div>
-                  <img src={calender} alt={user} />
-                </div>
-                <div className='mx-4'>
-                  <h3 className='font-bold'>Flight Dates: </h3>
-                  <p>2/5/22 - 2/10/22</p>
-                </div>
+              <div className='ml-4'>
+                <h3 className='font-bold'>Destination: </h3>
+                <p> Los Angeles,LA</p>
               </div>
-              <div className={style.icons}>
-                <div>
-                  <img src={user} alt={user} />
-                </div>
-                <div className='mx-4'>
-                  <h3 className='font-bold'>No of travelers: </h3>
-                  <p>1 Adult</p>
-                </div>
+            </div>
+            <div className={style.icons}>
+              <div className={style.img}>
+                <img src={calender} alt={user} />
               </div>
-              <div className={style.icons}>
-                <div>
-                  <img src={plane} alt={plane} />
-                </div>
-                <div className='mx-4'>
-                  <h3 className='font-bold'>Airline:</h3>
-                  <p>JetBlue</p>
-                </div>
+              <div className='mx-4'>
+                <h3 className='font-bold'>Flight Dates: </h3>
+                <p>2/5/22 - 2/10/22</p>
+              </div>
+            </div>
+            <div className={style.icons}>
+              <div className={style.img}>
+                <img src={user} alt={user} />
+              </div>
+              <div className='mx-4'>
+                <h3 className='font-bold'>No of travelers: </h3>
+                <p>1 Adult</p>
+              </div>
+            </div>
+            <div className={style.icons}>
+              <div className={style.img}>
+                <img src={plane} alt={plane} />
+              </div>
+              <div className='mx-4'>
+                <h3 className='font-bold'>Airline:</h3>
+                <p>JetBlue</p>
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </div>
     </div>

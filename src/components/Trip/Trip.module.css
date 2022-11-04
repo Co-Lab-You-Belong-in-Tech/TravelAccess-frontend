@@ -70,13 +70,19 @@ a {
   @apply flex bg-white rounded-lg border shadow-md md:flex-row md:max-w-md h-auto;
 }
 .cardImage {
-  @apply object-cover  rounded-t-lg md:h-auto md:w-40 md:rounded-none md:rounded-l-lg;
+  @apply object-cover mr-3 w-52 rounded-t-lg md:h-auto md:w-[45%] md:rounded-none md:rounded-l-lg;
+}
+.img {
+  @apply mr-2;
+}
+.cardText {
+  @apply flex  flex-col justify-between pl-4 py-3;
 }
 /* .text {
   margin:0;
 }  */
 .icons {
-  @apply flex  items-center pt-1;
+  @apply flex items-center pt-1;
 }
 
 @media only screen and (min-width: 768px) {
