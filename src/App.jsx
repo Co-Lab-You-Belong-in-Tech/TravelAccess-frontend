@@ -11,23 +11,25 @@ import ProtectedRoutes from './ProtectedRoutes';
 
 const App = () => {
   return (
-    <>
-      <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='signup' element={<Signup />} />
-        <Route element={<ProtectedRoutes />}>
-          <Route path='/' element={<Layout />}>
-            <Route path='homepage' element={<Homepage />} />
-            <Route path='dashboard' element={<Dashboard />}>
-              <Route path='trip' element={<Trip />} />
-              <Route path='travelprep' element={<TravelPrep />} />
-              <Route path='checklist' element={<CheckList />} />
-            </Route>
-          </Route>
-        </Route>
-      </Routes>
-    </>
-  );
+		<>
+			<Routes>
+				<Route path='/' element={<Login />} />
+				<Route path='signup' element={<Signup />} />
+				<Route element={<ProtectedRoutes />}>
+					<Route path='/' element={<Layout />}>
+						<Route path='homepage' element={<Homepage />} />
+						<Route path='dashboard' element={<Dashboard />}>
+							<Route path='trip' element={<Trip />} />
+							<Route path='travelprep' element={<TravelPrep />} />
+							{/* <Route path='/:trip' element={<TravelPrep/>}></Route> */}
+
+							<Route path='checklist' element={<CheckList />} />
+						</Route>
+					</Route>
+				</Route>
+			</Routes>
+		</>
+	);
 };
 
 const Layout = () => {
