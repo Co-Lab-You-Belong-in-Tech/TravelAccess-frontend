@@ -4,12 +4,16 @@ import style from './Header.module.css';
 
 import { useAuth } from '../../ProtectedRoutes';
 import print from '../../helper/print';
+import { logout } from '../../features/auth';
+import { useDispatch } from 'react-redux';
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const isAuth = useAuth();
   const handleLogout = () => {
     if (isAuth) {
+      dispatch(logout());
       localStorage.removeItem('token');
       navigate('/');
     }

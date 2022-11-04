@@ -11,12 +11,23 @@ export const loginUser = createAsyncThunk('auth/loginUser', async email => {
   }
 });
 
+export const registerUser = createAsyncThunk('api/registerUser', async data => {
+  try {
+    const response = await axiosInstance.post('/api/users', data);
+    print(response.data);
+    return response.data;
+  } catch (error) {
+    return error.response.data;
+  }
+});
+
 export const authSlice = createSlice({
   name: 'auth',
   initialState: {
     token: null,
     email: null,
     isAuthenticated: false,
+    message: null,
   },
   reducers: {
     login: (state, { email, token }) => {
@@ -24,8 +35,15 @@ export const authSlice = createSlice({
       state.token = token;
     },
     logout: state => {
-      state.user = null;
+      state.token = null;
       state.email = null;
+    },
+    signUp: (state, { email, token }) => {
+      state.email = email;
+      state.token = token;
+    },
+    clearMessage: state => {
+      state.message = null;
     },
   },
   extraReducers: {
@@ -39,8 +57,12 @@ export const authSlice = createSlice({
     [loginUser.pending]: (state, action) => {
       print('user Login Pending');
     },
+    [registerUser.fulfilled]: (state, action) => {
+      print('user Registration Fulfilled');
+      return { ...state, ...action.payload };
+    },
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, signUp, clearMessage } = authSlice.actions;
 export default authSlice.reducer;

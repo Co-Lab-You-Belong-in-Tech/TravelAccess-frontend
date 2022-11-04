@@ -1,9 +1,10 @@
 import { useEffect, useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { loginUser } from '../../features/auth';
+import { clearMessage, loginUser } from '../../features/auth';
 import style from '../Login/Login.module.css';
 import AuthContext from '../../context/AuthProvider';
+import print from '../../helper/print';
 
 const Login = () => {
   const { setAuth } = useContext(AuthContext);
@@ -11,17 +12,22 @@ const Login = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const { token, message } = useSelector(state => state.auth);
-  const [error, setError] = useState('');
 
   const handleChange = event => {
+    if (message) dispatch(clearMessage());
     const { value } = event.target;
     setEmail(value);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(loginUser(email));
-    setEmail('');
+    try {
+      dispatch(loginUser(email));
+    } catch (error) {
+      print(error);
+    } finally {
+      setEmail('');
+    }
   };
 
   useEffect(() => {
@@ -30,7 +36,7 @@ const Login = () => {
       localStorage.setItem('token', JSON.stringify(token));
       navigate('/homepage');
     } else {
-      setError(message);
+      navigate('/');
     }
   }, [token, message]);
 
@@ -39,7 +45,8 @@ const Login = () => {
       <div className='bg-white lg:w-1/2 lg:h-1/2 sm:w-3/4 sm:h-3/4'>
         <form onSubmit={handleSubmit} className='grid place-items-center p-10'>
           <h2 className='mb-3 font-bold text-[#0F7173] lg:text-xl'>Welcome</h2>
-          {error && <div>{error}</div>}
+          {message && <div className='text-red-500 text-sm'>{message}</div>}
+          {/* {loading && <div>Loading...</div>} */}
           <div className='relative w-full grid'>
             <input
               type='email'

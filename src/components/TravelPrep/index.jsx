@@ -10,10 +10,10 @@ export const TravelPrep = () => {
   const { trips } = useSelector(state => state.trips);
   const dispatch = useDispatch();
   const params = useParams();
-
+  console.log(trips);
   useEffect(() => {
     dispatch(fetchTrips());
-  }, [dispatch, trips]);
+  }, []);
 
   return (
     <div className={style.outerBox}>

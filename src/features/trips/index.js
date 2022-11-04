@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axiosInstance from '../../helper/axios';
-import print from '../../helper/print';
 
 export const fetchTrips = createAsyncThunk('trips/fetchTrips', async () => {
   try {
