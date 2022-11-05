@@ -139,9 +139,9 @@ const Homepage = () => {
               <img
                 src='../../assets/Images/Miami explore 1x.png'
                 alt='Miami, Florida'
-                className='lg:h-52'
+                className='lg:h-52 '
               />
-              <p className='mt-2'>Miami, Florida</p>
+              <p className='mt-3'>Miami, Florida</p>
             </div>
             <div>
               <img
@@ -149,7 +149,7 @@ const Homepage = () => {
                 alt='New York, New York'
                 className='lg:h-52'
               />
-              <p className='mt-2'>New York City,NY</p>
+              <p className='mt-3'>New York City,NY</p>
             </div>
             <div className={style.bottomImg}>
               <div className='flex flex-col '>

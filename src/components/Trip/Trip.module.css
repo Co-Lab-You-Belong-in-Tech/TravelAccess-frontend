@@ -86,7 +86,7 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .buttonForm,
+  
   .upcomimgText {
     display: none;
   }
@@ -95,12 +95,22 @@ a {
   .bottomImg {
     display: none;
   }
+  .buttonForm{
+    display: block;
+  }
   .cardContainer {
     @apply flex flex-row w-full;
   }
 }
 @media screen and (max-width: 600px) {
+  .cardContainer{
+   @apply flex flex-col text-xs;
+  }
+  .cardImage{
+    @apply w-full;
+  }
   .cardContainer2 {
+    
     display: none;
   }
 }
