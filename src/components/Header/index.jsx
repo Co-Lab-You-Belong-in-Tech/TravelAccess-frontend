@@ -1,4 +1,5 @@
-import { FaUserCircle } from 'react-icons/fa';
+// import { FaUserCircle } from 'react-icons/fa';
+import profile from '../../../public/assets/Icons/Profile filled icon.png'
 import { Link, useNavigate } from 'react-router-dom';
 import style from './Header.module.css';
 
@@ -19,41 +20,45 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <div className={style.wrapper}>
-        <div className={style.mainHeader}>
-          <div>
-            <h2 className='font-semibold'>
-              <Link to='/homepage'>
-                <img
-                  src='../../assets/Travel Access Logo.svg'
-                  alt='Travel Access Logo'
-                  className='w-40'
-                />
-              </Link>
-            </h2>
-          </div>
-          <div className={style.left}>
-            <div>
-              <button
-                className='text-primary mx-2 font-medium'
-                type='button'
-                onClick={handleLogout}
-              >
-                Logout
-              </button>
-            </div>
-            |
-            <div>
-              <Link to='/dashboard/trip'>
-                <FaUserCircle className='text-primary w-5 h-5' />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+		<div>
+			<div className={style.wrapper}>
+				<div className={style.mainHeader}>
+					<div>
+						<h2 className='font-semibold'>
+							<Link to='/homepage'>
+								<img
+									src='../../assets/Travel Access Logo.svg'
+									alt='Travel Access Logo'
+									className='w-40'
+								/>
+							</Link>
+						</h2>
+					</div>
+					<div className={style.left}>
+						<div>
+							<button
+								className='text-primary mx-2 font-medium'
+								type='button'
+								onClick={handleLogout}>
+								Logout
+							</button>
+						</div>
+						|
+						<div>
+							<Link to='/dashboard/trip'>
+								{/* <FaUserCircle  /> */}
+								<img
+									src={profile}
+									alt={profile}
+									className='text-primary w-5 h-5'
+								/>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Header;
