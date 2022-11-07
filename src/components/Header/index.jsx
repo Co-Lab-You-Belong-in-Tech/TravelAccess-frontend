@@ -1,5 +1,5 @@
 // import { FaUserCircle } from 'react-icons/fa';
-import profile from '../../../public/assets/Icons/Profile filled icon.png'
+import profile from '/assets/Icons/Profile filled icon.png'
 import { Link, useNavigate } from 'react-router-dom';
 import style from './Header.module.css';
 
