@@ -3,7 +3,7 @@ import traveller from '/assets/Images/Airport pic for checklist page 1x.png'
 import style from '../Guide/guide.module.css'
 
 const Guide = () => {
-  return (
+    return (
 		<div>
 			<div className={style.guideContainer}>
 				<h2 className='text-primary mb-7'>Guide</h2>
