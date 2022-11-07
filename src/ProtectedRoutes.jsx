@@ -1,21 +1,10 @@
-import { useContext } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import AuthContext from './context/AuthProvider';
-import print from './helper/print';
 
-//Move useAuth to a separate Hook file
-export const useAuth = () => {
-  const { auth } = useContext(AuthContext);
-  const user = JSON.parse(localStorage.getItem('token'));
-  if (auth && user) {
-    return true;
-  }
-  return false;
-};
+import { useSelector } from 'react-redux';
 
 const ProtectedRoutes = () => {
-  const isAuth = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to='/' />;
+  const { isAuthenticated } = useSelector(state => state.auth);
+  return isAuthenticated ? <Outlet /> : <Navigate to='/' />;
 };
 
 export default ProtectedRoutes;

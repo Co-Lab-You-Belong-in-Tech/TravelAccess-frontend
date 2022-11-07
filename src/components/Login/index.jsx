@@ -4,15 +4,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import { clearMessage, loginUser } from '../../features/auth';
 import style from '../Login/Login.module.css';
 import AuthContext from '../../context/AuthProvider';
+import print from '../../helper/print';
 
 const Login = () => {
-  const { setAuth } = useContext(AuthContext);
+  // const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const { token, message } = useSelector(state => state.auth);
-
-  const user = localStorage.getItem('token');
+  const { token, message, loading } = useSelector(state => state.auth);
+  // const user = localStorage.getItem('token');
 
   const handleChange = event => {
     if (message) dispatch(clearMessage());
@@ -23,21 +23,21 @@ const Login = () => {
   const handleSubmit = event => {
     event.preventDefault();
     dispatch(loginUser(email));
-
     setEmail('');
   };
 
   useEffect(() => {
     if (token) {
       localStorage.setItem('token', JSON.stringify(token));
-      setAuth(token);
-    }
-    if (user) {
-      navigate('/homepage');
-    } else {
       navigate('/');
+      // setAuth(token);
     }
-  }, [token, user, navigate]);
+    // if (user) {
+    //   navigate('/homepage');
+    // } else {
+    //   navigate('/');
+    // }
+  }, [token]);
 
   return (
     <section className={style.baseView}>
@@ -45,7 +45,7 @@ const Login = () => {
         <form onSubmit={handleSubmit} className='grid place-items-center p-10'>
           <h2 className='mb-3 font-bold text-[#0F7173] lg:text-xl'>Welcome</h2>
           {message && <div className='text-red-500 text-sm'>{message}</div>}
-          {/* {loading && <div>Loading...</div>} */}
+          {loading && <div>Loading...</div>}
           <div className='relative w-full grid'>
             <input
               type='email'

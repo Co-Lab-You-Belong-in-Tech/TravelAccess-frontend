@@ -26,6 +26,7 @@ export const authSlice = createSlice({
   initialState: {
     token: null,
     email: null,
+    loading: false,
     isAuthenticated: false,
     message: null,
   },
@@ -33,14 +34,17 @@ export const authSlice = createSlice({
     login: (state, { email, token }) => {
       state.email = email;
       state.token = token;
+      state.isAuthenticated = true;
     },
     logout: state => {
       state.token = null;
       state.email = null;
+      state.isAuthenticated = false;
     },
     signUp: (state, { email, token }) => {
       state.email = email;
       state.token = token;
+      state.isAuthenticated = true;
     },
     clearMessage: state => {
       state.message = null;
@@ -48,18 +52,21 @@ export const authSlice = createSlice({
   },
   extraReducers: {
     [loginUser.rejected]: (state, action) => {
-      print('user Login Rejected');
+      return { ...state, loading: false, message: action.payload.message };
     },
     [loginUser.fulfilled]: (state, action) => {
-      print('user Login Fulfilled');
-      return { ...state, ...action.payload };
+      return {
+        ...state,
+        ...action.payload,
+        loading: false,
+        isAuthenticated: true,
+      };
     },
     [loginUser.pending]: (state, action) => {
-      print('user Login Pending');
+      return { ...state, loading: true };
     },
     [registerUser.fulfilled]: (state, action) => {
-      print('user Registration Fulfilled');
-      return { ...state, ...action.payload };
+      return { ...state, ...action.payload, loading: false };
     },
   },
 });

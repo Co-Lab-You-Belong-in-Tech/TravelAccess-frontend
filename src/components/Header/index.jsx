@@ -2,16 +2,16 @@ import { FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import style from './Header.module.css';
 
-import { useAuth } from '../../ProtectedRoutes';
+// import { useAuth } from '../../ProtectedRoutes';
 import { logout } from '../../features/auth';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {
+  const { isAuthenticated } = useSelector(state => state.auth);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const isAuth = useAuth();
   const handleLogout = () => {
-    if (isAuth) {
+    if (isAuthenticated) {
       dispatch(logout());
       localStorage.removeItem('token');
       navigate('/');
@@ -19,20 +19,20 @@ const Header = () => {
   };
 
   return (
-    <div>
-      <div className={style.wrapper}>
-        <div className={style.mainHeader}>
-          <div>
-            <h2 className='font-semibold'>
-              <Link to='/homepage'>
-                <img
-                  src='../../assets/Travel Access Logo.svg'
-                  alt='Travel Access Logo'
-                  className='w-40'
-                />
-              </Link>
-            </h2>
-          </div>
+    <div className={style.wrapper}>
+      <div className={style.mainHeader}>
+        <div>
+          <h2 className='font-semibold'>
+            <Link to='/'>
+              <img
+                src='../../assets/Travel Access Logo.svg'
+                alt='Travel Access Logo'
+                className='w-40'
+              />
+            </Link>
+          </h2>
+        </div>
+        {isAuthenticated ? (
           <div className={style.left}>
             <div>
               <button
@@ -50,7 +50,21 @@ const Header = () => {
               </Link>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className={style.left}>
+            <div>
+              <Link to='/login' className='text-primary mx-2 font-medium'>
+                Login
+              </Link>
+            </div>
+            |
+            <div>
+              <Link to='/signup' className='text-primary mx-2 font-medium'>
+                Sign Up
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

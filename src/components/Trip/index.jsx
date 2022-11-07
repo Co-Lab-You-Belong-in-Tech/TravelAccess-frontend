@@ -39,7 +39,7 @@ export const Trip = () => {
                       type='text'
                       id='input-group-1'
                       className={style.homepageInput}
-                      placeholder='Enter a city or airport'
+                      placeholder='Leaving from'
                     />
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export const Trip = () => {
                       type='text'
                       id='input-group-1'
                       className={style.homepageInput}
-                      placeholder='Enter your destination'
+                      placeholder='Going to'
                     />
                   </div>
                 </div>
