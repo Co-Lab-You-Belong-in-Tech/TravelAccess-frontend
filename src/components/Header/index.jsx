@@ -6,13 +6,17 @@ import { logout } from '../../features/auth';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Header = () => {
+  const user = localStorage.getItem('token');
   const { isAuthenticated } = useSelector(state => state.auth);
+  const { trips } = useSelector(state => state.trips);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogout = () => {
     if (isAuthenticated) {
       dispatch(logout());
       localStorage.removeItem('token');
+      trips = [];
       navigate('/');
     }
   };
@@ -31,7 +35,7 @@ const Header = () => {
             </Link>
           </h2>
         </div>
-        {isAuthenticated ? (
+        {isAuthenticated && user ? (
           <div className={style.left}>
             <div>
               <button
@@ -45,7 +49,8 @@ const Header = () => {
             |
             <div>
               <Link to='/dashboard/trip'>
-                <FaUserCircle className='text-primary w-5 h-5' />
+                <img src={profile} alt='profile' className='w-5 mx-5' />
+                {/* <FaUserCircle className='text-primary w-5 h-5' /> */}
               </Link>
             </div>
           </div>

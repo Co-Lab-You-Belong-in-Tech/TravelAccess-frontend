@@ -56,7 +56,7 @@ export const TravelPrep = () => {
             <BsPlusLg className='text-4xl text-[#0F7173]' />
           </div>
         </div>
-        <div>{trips && tripList}</div>
+        <div>{trips.length ? tripList : null}</div>
       </div>
     </div>
   );

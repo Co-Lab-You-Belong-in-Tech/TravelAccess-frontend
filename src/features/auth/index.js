@@ -11,15 +11,22 @@ export const loginUser = createAsyncThunk('auth/loginUser', async email => {
   }
 });
 
-export const registerUser = createAsyncThunk('api/registerUser', async data => {
-  try {
-    const response = await axiosInstance.post('/api/users', data);
-    print(response.data);
-    return response.data;
-  } catch (error) {
-    return error.response.data;
+export const registerUser = createAsyncThunk(
+  'api/registerUser',
+  async (data, rejectWithValue) => {
+    try {
+      const response = await axiosInstance.post('/api/users', data);
+      print(response.data);
+      return response.data;
+    } catch (error) {
+      if (error.response && error.response.data.message) {
+        return rejectWithValue(error.response.data.message);
+      } else {
+        return rejectWithValue(error.message);
+      }
+    }
   }
-});
+);
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -50,24 +57,31 @@ export const authSlice = createSlice({
       state.message = null;
     },
   },
-  extraReducers: {
-    [loginUser.rejected]: (state, action) => {
-      return { ...state, loading: false, message: action.payload.message };
-    },
-    [loginUser.fulfilled]: (state, action) => {
-      return {
-        ...state,
-        ...action.payload,
-        loading: false,
-        isAuthenticated: true,
-      };
-    },
-    [loginUser.pending]: (state, action) => {
-      return { ...state, loading: true };
-    },
-    [registerUser.fulfilled]: (state, action) => {
-      return { ...state, ...action.payload, loading: false };
-    },
+  extraReducers(builder) {
+    builder
+      .addCase(loginUser.pending, (state, action) => {
+        return { ...state, loading: true };
+      })
+      .addCase(loginUser.fulfilled, (state, action) => {
+        return {
+          ...state,
+          ...action.payload,
+          loading: false,
+          isAuthenticated: true,
+        };
+      })
+      .addCase(loginUser.rejected, (state, action) => {
+        return {
+          ...state,
+          // ...action.payload,
+          message: action.payload,
+          loading: false,
+          isAuthenticated: false,
+        };
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        return { ...state, ...action.payload, loading: false };
+      });
   },
 });
 

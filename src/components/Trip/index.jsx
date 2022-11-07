@@ -124,7 +124,7 @@ export const Trip = () => {
           </div>
         </section>
       </div>
-      <div className=' border-gray-400 border-b mt-2 '></div>
+      <div className=' border-gray-200 border-b mt-2 '></div>
       <div className={style.upcomingDashboard}>
         <div className='text-primary mb-4 flex justify-between items-center'>
           <h4 className='font-bold'>Upcoming</h4>
