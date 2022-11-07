@@ -1,0 +1,8 @@
+.guideContainer{
+    @apply container mx-auto lg:w-2/6;
+}
+@media only screen and (max-width:600px){
+    .guideContainer{
+        @apply px-2;
+    }
+}
