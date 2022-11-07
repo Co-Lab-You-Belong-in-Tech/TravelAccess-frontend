@@ -4,7 +4,7 @@ import traveller from '/assets/Images/Airport pic for checklist page 1x.png'
 const Guide = () => {
   return (
 		<div>
-			<div className='container mx-auto w-2/6 leading-loose'>
+			<div className='container mx-auto lg:w-2/6 ml-2'>
 				<h2 className='text-primary mb-7'>Guide</h2>
 				<h3 className='font-bold'>Travelling through the heart of Seoul</h3>
 				<p className='leading-loose'>
