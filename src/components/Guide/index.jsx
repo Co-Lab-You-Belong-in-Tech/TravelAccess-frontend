@@ -1,10 +1,11 @@
 import React from 'react'
 import traveller from '/assets/Images/Airport pic for checklist page 1x.png'
+import style from '../Guide/guide.module.css'
 
 const Guide = () => {
   return (
 		<div>
-			<div className='container mx-auto lg:w-2/6 ml-2'>
+			<div className={style.guideContainer}>
 				<h2 className='text-primary mb-7'>Guide</h2>
 				<h3 className='font-bold'>Travelling through the heart of Seoul</h3>
 				<p className='leading-loose'>
