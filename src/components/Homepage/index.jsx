@@ -127,7 +127,7 @@ const Homepage = () => {
           </div>
         </section>
       </div>
-      <div className=' border-gray-400 border-b mt-2 '></div>
+      <div className=' border-gray-200 border-b mt-2 '></div>
       <div className={style.containerExplore}>
         <section className='container mx-auto p-1'>
           <div className={style.explore}>

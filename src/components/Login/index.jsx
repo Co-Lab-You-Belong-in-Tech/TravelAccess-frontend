@@ -3,16 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { clearMessage, loginUser } from '../../features/auth';
 import style from '../Login/Login.module.css';
-import AuthContext from '../../context/AuthProvider';
-import print from '../../helper/print';
 
 const Login = () => {
-  // const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const { token, message, loading } = useSelector(state => state.auth);
-  // const user = localStorage.getItem('token');
 
   const handleChange = event => {
     if (message) dispatch(clearMessage());
@@ -30,13 +26,7 @@ const Login = () => {
     if (token) {
       localStorage.setItem('token', JSON.stringify(token));
       navigate('/');
-      // setAuth(token);
     }
-    // if (user) {
-    //   navigate('/homepage');
-    // } else {
-    //   navigate('/');
-    // }
   }, [token]);
 
   return (
@@ -74,7 +64,7 @@ const Login = () => {
           <div>
             <p className='mt-8 text-primary'>
               Don't have an account?{' '}
-              <Link to='signup' className='font-bold'>
+              <Link to='/signup' className='font-bold'>
                 Signup
               </Link>
             </p>
