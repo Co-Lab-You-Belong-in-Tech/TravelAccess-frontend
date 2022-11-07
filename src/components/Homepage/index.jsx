@@ -129,12 +129,12 @@ const Homepage = () => {
       </div>
       <div className=' border-gray-200 border-b mt-2 '></div>
       <div className={style.containerExplore}>
-        <section className='container mx-auto p-1'>
+        <section className='p-1'>
           <div className={style.explore}>
             <h4 className={style.exploreDestinations}>Explore Destination</h4>
-            <h4>View all</h4>
+            <h4>View All</h4>
           </div>
-          <div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
+          <div className='grid  gap-2 grid-cols-2 lg:grid-cols-3'>
             <div>
               <img
                 src='../../assets/Images/Miami explore 1x.png'
@@ -149,7 +149,7 @@ const Homepage = () => {
                 alt='New York, New York'
                 className='lg:h-52'
               />
-              <p className='mt-3'>New York City,NY</p>
+              <p className='mt-2'>New York City</p>
             </div>
             <div className={style.bottomImg}>
               <div className='flex flex-col '>
