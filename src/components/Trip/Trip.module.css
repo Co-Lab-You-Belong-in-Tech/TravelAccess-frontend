@@ -64,13 +64,13 @@ a {
   @apply m-5 lg:mx-[5.5rem];
 }
 .cardContainer {
-  @apply flex bg-white rounded-lg border shadow-md md:flex-row md:max-w-md h-auto;
+  @apply flex bg-white border shadow-lg md:flex-row md:max-w-md h-auto;
 }
 .cardContainer2 {
-  @apply flex bg-white rounded-lg border shadow-md md:flex-row md:max-w-md h-auto;
+  @apply flex bg-white border shadow-md md:flex-row md:max-w-md h-auto;
 }
 .cardImage {
-  @apply object-cover mr-3 w-52 rounded-t-lg md:h-auto md:w-[45%] md:rounded-none md:rounded-l-lg;
+  @apply object-cover mr-3 w-52  md:h-auto md:w-[45%];
 }
 .img {
   @apply mr-2;
@@ -86,7 +86,7 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .buttonForm,
+  
   .upcomimgText {
     display: none;
   }
@@ -95,12 +95,29 @@ a {
   .bottomImg {
     display: none;
   }
+  .buttonForm{
+    display: block;
+  }
   .cardContainer {
     @apply flex flex-row w-full;
   }
 }
 @media screen and (max-width: 600px) {
+  .cardContainer{
+   @apply flex flex-col text-xs h-80;
+
+  }
+  .cardText{
+    @apply grid grid-cols-2;
+  }
+  .cardImage{
+    @apply w-full h-1/2;
+  }
   .cardContainer2 {
+    
     display: none;
+  }
+  .mobile{
+    width:20px
   }
 }
