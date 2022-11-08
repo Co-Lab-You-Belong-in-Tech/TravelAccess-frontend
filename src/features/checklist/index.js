@@ -21,7 +21,7 @@ export const checkListSlice = createSlice({
   },
   reducers: {
     addItem: (state, actions) => {
-      state.checklist.push(actions.payload);
+      return { ...state, checklist: [...state.checklist, actions.payload] };
     },
     removeItem: (state, actions) => {
       state.checklist = state.checklist.filter(

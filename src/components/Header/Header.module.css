@@ -11,3 +11,6 @@
 .wrapper {
   @apply border-solid border-b border-spacing-y-4;
 }
+a {
+  @apply decoration-current hover:font-normal hover:border-[#0F7173] visited:border-b-2 visited:border-[#0F7173];
+}

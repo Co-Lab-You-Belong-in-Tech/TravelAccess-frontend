@@ -8,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 const Header = () => {
   const user = localStorage.getItem('token');
   const { isAuthenticated } = useSelector(state => state.auth);
-  const { trips } = useSelector(state => state.trips);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -16,7 +15,6 @@ const Header = () => {
     if (isAuthenticated) {
       dispatch(logout());
       localStorage.removeItem('token');
-      trips = [];
       navigate('/');
     }
   };

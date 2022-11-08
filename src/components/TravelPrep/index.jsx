@@ -1,14 +1,20 @@
 import style from './TravelPrep.module.css';
 import { BsPlusLg } from 'react-icons/bs';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTrips } from '../../features/trips';
-
 import Checklistcards from '../ChecklistCards';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 export const TravelPrep = () => {
   const { trips } = useSelector(state => state.trips);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/dashboard/checklist');
+  };
 
   useEffect(() => {
     dispatch(fetchTrips());
@@ -52,11 +58,23 @@ export const TravelPrep = () => {
 
       <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 '>
         <div className='rounded-md border border-[#0F7173]'>
-          <div className='grid place-items-center h-[360px]'>
-            <BsPlusLg className='text-4xl text-[#0F7173]' />
-          </div>
+          <Button
+            onClick={handleClick}
+            className='grid place-items-center h-[360px] w-full'
+          >
+            <div>
+              <BsPlusLg className='text-4xl text-[#0F7173]' />
+            </div>
+          </Button>
         </div>
-        <div>{trips.length ? tripList : null}</div>
+
+        <div>
+          {trips.length <= 0 ? (
+            <h6 className='grid place-items-center h-[360px]'>No Trips</h6>
+          ) : (
+            tripList
+          )}
+        </div>
       </div>
     </div>
   );

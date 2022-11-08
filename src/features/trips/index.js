@@ -15,6 +15,8 @@ export const tripsSlice = createSlice({
 
   initialState: {
     trips: [],
+    loading: true,
+    message: null,
   },
   reducers: {
     addItem: (state, actions) => {
@@ -26,13 +28,13 @@ export const tripsSlice = createSlice({
   },
   extraReducers: {
     [fetchTrips.fulfilled]: (state, action) => {
-      return { ...state, trips: action.payload };
+      return { ...state, trips: action.payload, loading: false };
     },
     [fetchTrips.rejected]: (state, action) => {
-      console.log('user Login Rejected');
+      return { ...state, message: action.payload, loading: false };
     },
     [fetchTrips.pending]: (state, action) => {
-      console.log('user Login Pending');
+      return { ...state, loading: true };
     },
   },
 });

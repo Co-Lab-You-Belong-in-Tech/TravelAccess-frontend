@@ -1,11 +1,11 @@
-/* .containerHomepage {
+.containerHomepage {
   @apply rounded-xl border-2 border-[#0F7173] m-5 lg:mx-[5.5rem];
 }
 .homepageInnerTabs {
   @apply bg-[#117E81] rounded-t text-white;
 }
 .homepageTabs {
-  @apply flex  justify-around items-center;
+  @apply flex  justify-around items-center py-3;
 }
 .links {
   text-decoration: white !important;
@@ -25,7 +25,7 @@
 }
 .nextInput {
   @apply bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5;
-} */
+}
 .buttonContainer {
   @apply flex justify-end items-center mt-3;
 }

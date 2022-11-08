@@ -26,7 +26,7 @@ const Signup = () => {
     dispatch(registerUser(inputs));
     if (token) {
       localStorage.setItem('token', JSON.stringify(token));
-      navigate('/homepage');
+      navigate('/');
     } else {
       navigate('/signup');
     }
