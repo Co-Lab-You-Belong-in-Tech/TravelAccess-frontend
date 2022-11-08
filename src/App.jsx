@@ -13,11 +13,11 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='signup' element={<Signup />} />
-        <Route element={<ProtectedRoutes />}>
-          <Route path='/' element={<Layout />}>
-            <Route path='homepage' element={<Homepage />} />
+        <Route element={<Layout />}>
+          <Route path='/' element={<Homepage />} />
+          <Route path='login' element={<Login />} />
+          <Route path='signup' element={<Signup />} />
+          <Route element={<ProtectedRoutes />}>
             <Route path='dashboard' element={<Dashboard />}>
               <Route path='trip' element={<Trip />} />
               <Route path='travelprep' element={<TravelPrep />} />
@@ -25,6 +25,12 @@ const App = () => {
             </Route>
           </Route>
         </Route>
+        <Route
+          path='*'
+          element={
+            <h1 className='grid place-items-center h-[100vh]'>404 Not Found</h1>
+          }
+        />
       </Routes>
     </>
   );

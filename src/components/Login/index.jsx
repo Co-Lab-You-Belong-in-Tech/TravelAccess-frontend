@@ -1,52 +1,41 @@
 import { useEffect, useState, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { loginUser } from '../../features/auth';
+import { clearMessage, loginUser } from '../../features/auth';
 import style from '../Login/Login.module.css';
-import AuthContext from '../../context/AuthProvider';
 
 const Login = () => {
-  const { setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
-  const { token } = useSelector(state => state.auth);
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
+  const { token, message, loading } = useSelector(state => state.auth);
 
   const handleChange = event => {
+    if (message) dispatch(clearMessage());
     const { value } = event.target;
     setEmail(value);
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    try {
-      dispatch(loginUser(email));
-    } catch (error) {
-      console.log(error);
-      setError(error);
-    } finally {
-      setLoading(false);
-    }
+    dispatch(loginUser(email));
     setEmail('');
   };
 
   useEffect(() => {
     if (token) {
-      setAuth(token);
       localStorage.setItem('token', JSON.stringify(token));
-      navigate('/homepage');
+      navigate('/');
     }
   }, [token]);
 
-  loading && <div>Loading...</div>;
-  error && <div>{error}</div>;
   return (
     <section className={style.baseView}>
       <div className='bg-white lg:w-1/2 lg:h-1/2 sm:w-3/4 sm:h-3/4'>
         <form onSubmit={handleSubmit} className='grid place-items-center p-10'>
           <h2 className='mb-3 font-bold text-[#0F7173] lg:text-xl'>Welcome</h2>
+          {message && <div className='text-red-500 text-sm'>{message}</div>}
+          {loading && <div>Loading...</div>}
           <div className='relative w-full grid'>
             <input
               type='email'
@@ -64,7 +53,6 @@ const Login = () => {
               Email
             </label>
           </div>
-
           <div className=' flex justify-center items-center mt-8 '>
             <button
               type='submit'
@@ -73,11 +61,10 @@ const Login = () => {
               Login
             </button>
           </div>
-
           <div>
             <p className='mt-8 text-primary'>
               Don't have an account?{' '}
-              <Link to='signup' className='font-bold'>
+              <Link to='/signup' className='font-bold'>
                 Signup
               </Link>
             </p>

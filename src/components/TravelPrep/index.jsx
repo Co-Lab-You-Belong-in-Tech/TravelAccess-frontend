@@ -1,6 +1,29 @@
-import { Link } from 'react-router-dom';
 import style from './TravelPrep.module.css';
+import { BsPlusLg } from 'react-icons/bs';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTrips } from '../../features/trips';
+import Checklistcards from '../ChecklistCards';
+import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
+
 export const TravelPrep = () => {
+  const { trips } = useSelector(state => state.trips);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/dashboard/checklist');
+  };
+
+  useEffect(() => {
+    dispatch(fetchTrips());
+  }, [dispatch]);
+
+  const tripList = trips.map(trip => (
+    <Checklistcards key={trip.id} trip={trip} />
+  ));
+
   return (
     <div className={style.outerBox}>
       <form className='flex items-center'>
@@ -33,55 +56,24 @@ export const TravelPrep = () => {
         </div>
       </form>
 
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-3 my-4'>
-        <Link to='/dashboard/checklist/'>
-          <img
-            src='https://via.placeholder.com'
-            alt=''
-            className='bg-white border border-green-600 h-full'
-          />
-        </Link>
-        <div className={style.showcase}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>Seoul</p>
-            <p className='text-white lg:text-2xl'>South Korea</p>
-          </div>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 '>
+        <div className='rounded-md border border-[#0F7173]'>
+          <Button
+            onClick={handleClick}
+            className='grid place-items-center h-[360px] w-full'
+          >
+            <div>
+              <BsPlusLg className='text-4xl text-[#0F7173]' />
+            </div>
+          </Button>
         </div>
-        <div className={style.showcase1}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>London</p>
-            <p className='text-white lg:text-2xl'>United Kingdom</p>
-          </div>
-        </div>
-        <div className={style.showcase2}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>New york</p>
-            <p className='text-white lg:text-2xl'>USA</p>
-          </div>
-        </div>
-        <div className={style.showcase3}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>Los Angles</p>
-            <p className='text-white lg:text-2xl'>USA</p>
-          </div>
-        </div>
-        <div className={style.showcase4}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>Sydney</p>
-            <p className='text-white lg:text-2xl'>Australia</p>
-          </div>
-        </div>
-        <div className={style.showcase5}>
-          <div className={style.overlay}>
-            {/* <p className='text-white lg:text-2xl'>Bangkok</p>
-						<p className='text-white lg:text-2xl'>Thailand</p> */}
-          </div>
-        </div>
-        <div className={style.showcase6}>
-          <div className={style.overlay}>
-            <p className='text-white lg:text-2xl'>Bazil</p>
-            <p className='text-white lg:text-2xl'>South America</p>
-          </div>
+
+        <div>
+          {trips.length <= 0 ? (
+            <h6 className='grid place-items-center h-[360px]'>No Trips</h6>
+          ) : (
+            tripList
+          )}
         </div>
       </div>
     </div>

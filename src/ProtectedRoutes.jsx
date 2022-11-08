@@ -1,20 +1,10 @@
-import { useContext } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import AuthContext from './context/AuthProvider';
-import print from './helper/print';
 
-//Move useAuth to a separate file
-export const useAuth = () => {
-  const { auth } = useContext(AuthContext);
-  if (auth) {
-    return true;
-  }
-  return false;
-};
+import { useSelector } from 'react-redux';
 
 const ProtectedRoutes = () => {
-  const isAuth = useAuth();
-  return isAuth ? <Outlet /> : <Navigate to='/' />;
+  const { isAuthenticated } = useSelector(state => state.auth);
+  return isAuthenticated ? <Outlet /> : <Navigate to='/' />;
 };
 
 export default ProtectedRoutes;

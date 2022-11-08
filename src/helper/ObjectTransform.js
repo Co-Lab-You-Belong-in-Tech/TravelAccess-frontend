@@ -1,9 +1,18 @@
-import { groupBy } from 'lodash';
-
-export const transform = (data, key) => {
-  const grouped = groupBy(data, key);
-  const transformed = Object.keys(grouped).map(key => ({
-    [key]: grouped[key],
-  }));
-  return transformed;
+export const transform = data => {
+  Object.values(
+    data.reduce((result, { item_name, status, category }) => {
+      // Create new group
+      if (!result[category])
+        result[category] = {
+          category,
+          items: [],
+        };
+      // Append to group
+      result[category].items.push({
+        item_name,
+        status,
+      });
+      return result;
+    }, {})
+  );
 };

@@ -1,8 +1,8 @@
 import style from './Trip.module.css';
 import { MdLocationOn } from 'react-icons/md';
-import { FaPlane, FaRegCalendarTimes, FaUser } from 'react-icons/fa';
-
-import TripDetails from '../TripDetails';
+// import { FaPlane, FaRegCalendarTimes, FaUser } from 'react-icons/fa';
+import TripUpcoming from '../TripUpcoming';
+import Guide from '../Guide';
 
 export const Trip = () => {
   return (
@@ -124,72 +124,16 @@ export const Trip = () => {
           </div>
         </section>
       </div>
-      <div className=' border-gray-400 border-b mt-2 '></div>
+      <div className=' border-gray-200 border-b mt-2 '></div>
       <div className={style.upcomingDashboard}>
         <div className='text-primary mb-4 flex justify-between items-center'>
           <h4 className='font-bold'>Upcoming</h4>
           <h4 className={style.upcomimgText}>View All</h4>
         </div>
-
-        <div className='grid gap-3 grid-col-3'>
-          <div className={style.cardContainer}>
-            <img
-              className={style.cardImage}
-              src='../../assets/Images/Seoul upcoming trip 1x.png'
-              alt='seoul'
-            />
-            <div className='flex justify-between p-4 leading-normal'>
-              <div className='flex flex-col'>
-                <div className={style.icons}>
-                  <div>
-                    <MdLocationOn className={style.icon} />
-                  </div>
-                  <div>
-                    <h5 className='font-bold'>Destination: </h5>
-                    <p> Seoul, South Korea</p>
-                  </div>
-                </div>
-                <div className={style.icons}>
-                  <div>
-                    <FaRegCalendarTimes className={style.icon} />
-                  </div>
-                  <div>
-                    <h3 className='font-bold'>Flight Dates: </h3>
-                    <p>12/10/22 - 12/30/22</p>
-                  </div>
-                </div>
-                <div className={style.icons}>
-                  <div>
-                    <FaUser className={style.icon} />
-                  </div>
-                  <div>
-                    <h3 className='font-bold'>No. of travelers: </h3>
-                    <p>2 Adults</p>
-                  </div>
-                </div>
-                <div className={style.icons}>
-                  <div>
-                    <FaPlane className={style.icon} />
-                  </div>
-                  <div>
-                    <h3 className='font-bold'>AirLine: </h3>
-                    <p>Korea Air</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={style.cardContainer}>
-            <img
-              className={style.cardImage}
-              src='../../assets/Images/LA upcoming trip 1x.png'
-              alt='LA'
-            />
-            <div className='flex flex-col justify-between p-4 leading-normal'>
-              content here
-            </div>
-          </div>
+        <div>
+          <TripUpcoming />
         </div>
+
         <section className='mt-6'>
           <div className='text-primary mb-4 flex justify-between items-center'>
             <h4 className='font-bold'>Discover</h4>
@@ -197,13 +141,13 @@ export const Trip = () => {
           </div>
         </section>
         <div className='grid grid-cols-2 lg:grid-cols-3 gap-2'>
-          <div>
+          <div className='flex flex-col justify-start items-start '>
             <img
               src='../../assets/Images/Namsan tower discover 1x.png'
               alt='Namsan Tower'
               className='lg:h-52'
             />
-            <p className='mt-2 text'>Namsan Tower</p>
+            <p className='-mt-2 ml-2 text'>Namsan Tower</p>
           </div>
           <div>
             <img
@@ -211,7 +155,7 @@ export const Trip = () => {
               alt='Bukchon Hanok Village'
               className='lg:h-52'
             />
-            <p className='mt-2 text'>Bukchon Hanok Village</p>
+            <p className='-mt-2 ml-2 text'>Bukchon Hanok Village</p>
           </div>
           <div className={style.bottomImg}>
             <div className='flex flex-col '>
@@ -220,10 +164,13 @@ export const Trip = () => {
                 alt='Lotte World'
                 className='lg:h-52'
               />
-              <p className='mt-2 text'>Lotte World</p>
+              <p className='-mt-2 ml-2 text'>Lotte World</p>
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <Guide />
       </div>
     </>
   );

@@ -64,22 +64,29 @@ a {
   @apply m-5 lg:mx-[5.5rem];
 }
 .cardContainer {
-  @apply flex flex-col w-[450px] mr-4 bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl;
+  @apply flex bg-white border shadow-lg md:flex-row md:max-w-md h-auto;
+}
+.cardContainer2 {
+  @apply flex bg-white border shadow-md md:flex-row md:max-w-md h-auto;
 }
 .cardImage {
-  @apply object-cover w-1/2 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg;
+  @apply object-cover mr-3 w-52  md:h-auto md:w-[45%];
 }
-.text {
-  font-size: 16px;
+.img {
+  @apply mr-2;
 }
+.cardText {
+  @apply flex  flex-col justify-between pl-4 py-3;
+}
+/* .text {
+  margin:0;
+}  */
 .icons {
-  @apply flex justify-between items-center w-full p-3;
+  @apply flex items-center pt-1;
 }
-.icon {
-  @apply text-4xl text-primary mr-4;
-}
+
 @media only screen and (min-width: 768px) {
-  .buttonForm,
+  
   .upcomimgText {
     display: none;
   }
@@ -88,10 +95,29 @@ a {
   .bottomImg {
     display: none;
   }
-  .cardContainer {
-    @apply flex flex-row;
+  .buttonForm{
+    display: block;
   }
-  .text {
-    font-size: 12px;
+  .cardContainer {
+    @apply flex flex-row w-full;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardContainer{
+   @apply flex flex-col text-xs h-80;
+
+  }
+  .cardText{
+    @apply grid grid-cols-2;
+  }
+  .cardImage{
+    @apply w-full h-1/2;
+  }
+  .cardContainer2 {
+    
+    display: none;
+  }
+  .mobile{
+    width:20px
   }
 }
