@@ -40,7 +40,7 @@ const CheckList = () => {
   return (
     <div className={style.outerBox}>
       <form onSubmit={handleSubmit}>
-        <div className='flex flex-row justify-center mb-5 '>
+        <div className='flex flex-row justify-center mb-5 text-white '>
           <h2 className='font-extrabold text-xl'>Destination: &nbsp;</h2>
           <select className='text-lg' name='trip' id='trip'>
             <option className='text-lg' value=' Seoul, South Korea.'>
@@ -64,8 +64,10 @@ const CheckList = () => {
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-2 md:grid-cols-3'>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Clothing</h3>
-            <div className='flex flex-row items-center justify-between border-b'>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-gray-200 '>
+              Clothing
+            </h3>
+            <div className='flex flex-row items-center justify-between border-b '>
               <span>
                 <h4>Trouser</h4>
               </span>
@@ -109,7 +111,9 @@ const CheckList = () => {
             </div>
           </div>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Accessories</h3>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-white'>
+              Accessories
+            </h3>
             <div className='flex flex-row items-center justify-between border-b'>
               <span>
                 <h4>Sun Glasses</h4>
@@ -136,7 +140,7 @@ const CheckList = () => {
             </div>
           </div>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Shoes</h3>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-white'>Shoes</h3>
             <div className='flex flex-row items-center justify-between border-b'>
               <span>
                 <h4>Slippers</h4>
@@ -157,7 +161,9 @@ const CheckList = () => {
             </div>
           </div>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Essentials</h3>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-white'>
+              Essentials
+            </h3>
             <div className='flex flex-row items-center justify-between border-b'>
               <span>
                 <h4>Passport</h4>
@@ -184,7 +190,9 @@ const CheckList = () => {
             </div>
           </div>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Accessories</h3>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-white'>
+              Accessories
+            </h3>
             <div className='flex flex-row items-center justify-between border-b'>
               <span>
                 <h4>Sun Glasses</h4>
@@ -211,7 +219,9 @@ const CheckList = () => {
             </div>
           </div>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Accessories</h3>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-white'>
+              Accessories
+            </h3>
             <div className='flex flex-row items-center justify-between border-b'>
               <span>
                 <h4>Sun Glasses</h4>
@@ -238,7 +248,9 @@ const CheckList = () => {
             </div>
           </div>
           <div className='w-[7.5rem]'>
-            <h3 className='font-bold'>Accessories</h3>
+            <h3 className='font-bold bg-[#0F7173] px-5 text-white'>
+              Accessories
+            </h3>
             <div className='flex flex-row items-center justify-between border-b'>
               <span>
                 <h4>Sun Glasses</h4>
