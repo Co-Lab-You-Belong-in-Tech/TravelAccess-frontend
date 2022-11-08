@@ -1,8 +1,6 @@
 import style from './Trip.module.css';
 import { MdLocationOn } from 'react-icons/md';
-// import { FaPlane, FaRegCalendarTimes, FaUser } from 'react-icons/fa';
 import TripUpcoming from '../TripUpcoming';
-import Guide from '../Guide';
 
 export const Trip = () => {
   return (
@@ -170,7 +168,7 @@ export const Trip = () => {
         </div>
       </div>
       <div>
-        <Guide />
+        
       </div>
     </>
   );

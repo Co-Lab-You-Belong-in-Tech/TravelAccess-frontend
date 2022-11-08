@@ -41,7 +41,7 @@ const Login = () => {
               type='email'
               value={email}
               id='floating_filled'
-              className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              className='block px-2.5 pb-2.5 pt-3 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
               onChange={handleChange}
               required

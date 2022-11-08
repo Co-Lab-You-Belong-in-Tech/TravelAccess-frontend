@@ -6,7 +6,7 @@ const Guide = () => {
     return (
 		<div>
 			<div className={style.guideContainer}>
-				<h2 className='text-primary mb-7'>Guide</h2>
+				<h2 className='text-primary mb-5 font-extrabold'>Guide</h2>
 				<h3 className='font-bold'>Travelling through the heart of Seoul</h3>
 				<p className='leading-loose'>
 					South Korea is known for the food, music, and attractions. Before you
