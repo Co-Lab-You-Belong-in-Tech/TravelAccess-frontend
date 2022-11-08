@@ -34,10 +34,10 @@ const Signup = () => {
 
   return (
     <section className={baseStyle.baseView}>
-      <div className='bg-white lg:w-1/2'>
+      <div className='bg-white lg:w-1/4'>
         <form
           onSubmit={handleSubmit}
-          className='flex flex-col  p-5 text-center '
+          className='flex flex-col p-5 text-center'
         >
           <h2 className='mb-3 font-bold text-primary lg:text-3xl'>Welcome</h2>
           {message && <div className='text-red-500 text-sm'>{message}</div>}
@@ -48,7 +48,7 @@ const Signup = () => {
               value={name || ''}
               id='floating_filled'
               onChange={handleChange}
-              className='block px-2.5 pb-2.5 pt-3 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              className='block px-2.5 pb-2 pt-3 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
             />
             <label
@@ -65,7 +65,7 @@ const Signup = () => {
               value={email || ''}
               id='floating_filled'
               onChange={handleChange}
-              className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              className='block px-2.5 pb-2 pt-3 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
             />
             <label
@@ -82,7 +82,7 @@ const Signup = () => {
               value={phone || ''}
               id='floating_filled'
               onChange={handleChange}
-              className='block px-2.5 pb-2.5 pt-5 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
+              className='block px-2.5 pb-2 pt-3 text-sm text-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#0F7173] peer'
               placeholder=' '
             />
             <label

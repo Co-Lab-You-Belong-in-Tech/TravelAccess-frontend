@@ -54,7 +54,7 @@ const CheckList = () => {
 						
 					/>
 				</div>
-				<div className='grid grid-cols-1 lg:grid-cols-4 gap-2 md:grid-cols-3'>
+				<div className='grid grid-cols-1 lg:grid-cols-4 gap-2 md:grid-cols-3 border border-emerald-700 p-2'>
 					<div className='w-[7.5rem]'>
 						<h3 className='font-bold'>Clothing</h3>
 						<div className='flex flex-row items-center justify-between border-b'>

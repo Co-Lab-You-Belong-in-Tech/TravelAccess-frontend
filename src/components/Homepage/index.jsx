@@ -16,7 +16,7 @@ const Homepage = () => {
             <h4 className={style.exploreDestinations}>Explore Destination</h4>
             <h4>View All</h4>
           </div>
-          <div className='grid  gap-2 grid-cols-2 lg:grid-cols-3'>
+          <div className='grid gap-2 grid-cols-2 lg:grid-cols-3'>
             <div>
               <img
                 src='../../assets/Images/Miami explore 1x.png'
@@ -34,7 +34,7 @@ const Homepage = () => {
               <p className='mt-2'>New York City</p>
             </div>
             <div className={style.bottomImg}>
-              <div className='flex flex-col '>
+              <div className='flex flex-col'>
                 <img
                   src='../../assets/Images/London explore 1x.png'
                   alt='London, United Kingdom'

@@ -91,7 +91,7 @@ const TripForm = () => {
                   name='end'
                   type='date'
                   className={style.nextInput}
-                  placeholder='select date'
+                
                 />
                 {/* </div> */}
               </div>
@@ -103,10 +103,10 @@ const TripForm = () => {
                   id='travelers'
                 >
                   <option value='1'>1 Adult</option>
-                  <option value='2'>2</option>
-                  <option value='3'>3</option>
-                  <option value='4'>4</option>
-                  <option value='5'>5</option>
+                  <option value='2'>2 Adult</option>
+                  <option value='3'>3 Adult</option>
+                  <option value='4'>4 Adult</option>
+                  <option value='5'>5 Adult</option>
                 </select>
               </div>
               <div className='flex flex-col'>
