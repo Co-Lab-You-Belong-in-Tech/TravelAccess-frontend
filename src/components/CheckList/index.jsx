@@ -8,9 +8,9 @@ import CheckListItem from '../CheckListItem';
 import print from '../../helper/print';
 import Guide from '../Guide';
 import ChecklistSelect from '../ChecklistSelect';
-import printIcon from '../../../public/assets/Icons/Print icon.svg'
-import download from '../../../public/assets/Icons/Download icon.svg'
-import share from '../../../public/assets/Icons/Share icon.svg'
+import printIcon from '/public/assets/Icons/Print icon.svg'
+import download from '/assets/Icons/Download icon.svg'
+import share from '/public/assets/Icons/Share icon.svg'
 
 const CheckList = () => {
   const { checklist, trips } = useSelector(state => state);
