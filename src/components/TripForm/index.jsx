@@ -1,8 +1,35 @@
+import { useState } from 'react';
 import { MdLocationOn } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import style from './TripForm.module.css';
 
 const TripForm = () => {
+  const [trip, setTrip] = useState({
+    origin: '',
+    destination: '',
+    departure_date: '',
+    return_date: '',
+    adult: 1,
+    children: 0,
+    ticket_class: 'economy',
+  });
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(trip);
+    setTrip({
+      origin: '',
+      destination: '',
+      departure_date: '',
+      return_date: '',
+      adult: 1,
+      children: 0,
+      ticket_class: 'economy',
+    });
+  };
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setTrip({ ...trip, [name]: value });
+  };
   return (
     <div className={style.containerHomepage}>
       <div className={style.homepageInnerTabs}>
@@ -31,7 +58,7 @@ const TripForm = () => {
           <h4 className='font-bold ml-4'>Roundtrip</h4>
         </div>
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={style.formUp}>
               <div className='flex flex-col location'>
                 <label
@@ -47,9 +74,12 @@ const TripForm = () => {
 
                   <input
                     type='text'
+                    name='origin'
+                    value={trip.origin}
                     id='input-group-1'
                     className={style.homepageInput}
-                    placeholder='Enter a city or airport'
+                    placeholder='Leaving from'
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -67,9 +97,12 @@ const TripForm = () => {
                   </div>
                   <input
                     type='text'
+                    name='destination'
+                    value={trip.destination}
                     id='input-group-1'
                     className={style.homepageInput}
-                    placeholder='Enter your destination'
+                    placeholder='Going to'
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -79,19 +112,30 @@ const TripForm = () => {
               <div className='flex flex-col'>
                 <label className='mb-2'> Departing</label>
                 <input
-                  name='start'
+                  name='depature_date'
                   type='date'
                   className={style.nextInput}
-                  placeholder='select date'
+                  min={new Date().toISOString().split('T')[0]}
+                  onChange={handleChange}
+                  required
                 />
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Returning</label>
                 <input
-                  name='end'
-                  type='date'
                   className={style.nextInput}
-                  placeholder='select date'
+                  name='return_date'
+                  type='date'
+                  min={
+                    trip.departure_date
+                      ? new Date(trip.departure_date)
+                          .toISOString()
+                          .split('T')[0]
+                      : ''
+                  }
+                  onChange={handleChange}
+                  required
+                  disabled={trip.departure_date === '' ? true : false}
                 />
                 {/* </div> */}
               </div>
@@ -99,6 +143,8 @@ const TripForm = () => {
                 <label className='mb-2'>Travelers</label>
                 <select
                   className={style.nextInput}
+                  value={trip.adult}
+                  onChange={handleChange}
                   name='travelers'
                   id='travelers'
                 >
@@ -113,6 +159,8 @@ const TripForm = () => {
                 <label className='mb-2'>Tickets</label>
                 <select
                   className={style.nextInput}
+                  value={trip.ticket_class}
+                  onChange={handleChange}
                   name='travelers'
                   id='travelers'
                 >
