@@ -3,7 +3,7 @@ import React from 'react'
 const ChecklistSelect = () => {
   return (
 		<div>
-			<select name='trip' id='trip' className='border border-green-800'>
+			<select name='trip' id='trip' className='border-b border-green-800'>
 				<option className='text-md' value='Choose trip'>
 					{' '}
                     Choose trip

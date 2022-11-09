@@ -8,6 +8,7 @@ const CheckBox = () => {
         type='checkbox'
         checked={checked}
         onChange={() => setChecked(!checked)}
+        className='mr-2'
       />
     </div>
   );
