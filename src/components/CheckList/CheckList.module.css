@@ -1,3 +1,13 @@
 .outerBox {
-  @apply w-4/5 mx-auto my-5;
+  @apply w-4/5 mx-auto my-5 grid grid-cols-1 lg:grid-cols-2;
 }
+.checklistIcons{
+  @apply flex justify-end items-center mb-3
+}
+@media only screen and (max-width: 600px){
+  .checklistIcons{
+    @apply flex  items-center
+}
+
+}
+

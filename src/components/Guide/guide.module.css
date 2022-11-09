@@ -1,8 +1,12 @@
 .guideContainer{
-    @apply container mx-auto lg:w-2/6;
+    @apply container mx-auto lg:w-4/5 ;
+    
+}
+.guideBorder{
+  border:2px solid rgba(84, 81, 214, 1)
 }
 @media only screen and (max-width:600px){
     .guideContainer{
-        @apply px-2;
+        @apply px-2 ;
     }
 }
