@@ -6,6 +6,7 @@ import { fetchTrips } from '../../features/trips';
 import Checklistcards from '../ChecklistCards';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import like from '/assets/Icons/Heart filled icon.svg';
 
 export const TravelPrep = () => {
   const { trips } = useSelector(state => state.trips);
@@ -20,9 +21,9 @@ export const TravelPrep = () => {
     dispatch(fetchTrips());
   }, [dispatch]);
 
-  const tripList = trips.map(trip => (
-    <Checklistcards key={trip.id} trip={trip} />
-  ));
+  // const tripList = trips.map(trip => (
+  //   <Checklistcards key={trip.id} trip={trip} />
+  // ));
 
   return (
     <div className={style.outerBox}>
@@ -56,7 +57,7 @@ export const TravelPrep = () => {
         </div>
       </form>
 
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-5 '>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-5 lg:grid-cols-4 '>
         <div className='rounded-md border border-[#0F7173]'>
           <Button
             onClick={handleClick}
@@ -67,14 +68,77 @@ export const TravelPrep = () => {
             </div>
           </Button>
         </div>
+        <div className={style.showcase} style={{ textAlign: 'center' }}>
+          <div className={style.overlay}>
+            <p className={style.textCountry}>Seoul</p>
+            <p className={style.textCountry}>South Korea</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
+        <div className={style.showcase1} style={{ textAlign: 'center' }}>
+          <div>
+            <p className={style.textCountry}>London</p>
+            <p className={style.textCountry}>United Kingdom</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
+        <div className={style.showcase2} style={{ textAlign: 'center' }}>
+          <div>
+            <p className={style.textCountry}>New York City</p>
+            <p className={style.textCountry}>USA</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
+        <div className={style.showcase3} style={{ textAlign: 'center' }}>
+          <div>
+            <p className={style.textCountry}>Los Angeles</p>
+            <p className={style.textCountry}>USA</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
+        <div className={style.showcase4} style={{ textAlign: 'center' }}>
+          <div>
+            <p className={style.textCountry}>Sydney</p>
+            <p className={style.textCountry}>Australia</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
+        <div className={style.showcase5} style={{ textAlign: 'center' }}>
+          <div>
+            <p className={style.textCountry}>Bankok</p>
+            <p className={style.textCountry}>Thailand</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
+        <div className={style.showcase5} style={{ textAlign: 'center' }}>
+          <div>
+            <p className={style.textCountry}>Sao Paulo</p>
+            <p className={style.textCountry}>Brazil</p>
+            <div className={style.heart}>
+              <img src={like} alt={like} />
+            </div>
+          </div>
+        </div>
 
-        <div>
+        {/* <div>
           {trips.length <= 0 ? (
             <h6 className='grid place-items-center h-[360px]'>No Trips</h6>
           ) : (
             tripList
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );

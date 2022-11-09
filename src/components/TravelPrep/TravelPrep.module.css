@@ -5,6 +5,9 @@
   height: 360px;
   width: 265px;
 }
+.textCountry {
+  @apply text-[20px] text-white font-bold font-sans;
+}
 .showcase {
   background-image: url('../../assets/Images/Seoul template 2x.png');
   background-repeat: no-repeat;
@@ -17,35 +20,78 @@
   border-radius: 5px;
   @apply relative;
 }
-.heart {
-  @apply absolute top-2 right-1;
-}
-
 .showcase1 {
   background-image: url('../../assets/Images/London template 2x.png');
   background-repeat: no-repeat;
   background-position: 40% 40%;
   background-size: cover;
   height: 360px;
-  width: 265px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  @apply relative;
 }
-
-@media only screen and (max-width: 600px) {
-  .Template {
-    height: 286px;
-    width: 165px;
-  }
-  .showcase {
-    height: 286px;
-    width: 165px;
-  }
-  .showcase1 {
-    height: 286px;
-    width: 165px;
-  }
-
-  .overlay {
-    height: 286px;
-    width: 165px;
-  }
+.showcase2 {
+  background-image: url('../../assets/Images/NYC template 2x.png');
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
+  background-size: cover;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  @apply relative;
+}
+.showcase3 {
+  background-image: url('../../assets/Images/LA template 2x.png');
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
+  background-size: cover;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  @apply relative;
+}
+.showcase4 {
+  background-image: url('../../assets/Images/Sydney 2x.png');
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
+  background-size: cover;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  @apply relative;
+}
+.showcase5 {
+  background-image: url('../../assets/Images/Bankok template 2x.png');
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
+  background-size: cover;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  @apply relative;
+}
+.showcase6 {
+  background-image: url('../../assets/Images/Brazil 2x.png');
+  background-repeat: no-repeat;
+  background-position: 40% 40%;
+  background-size: cover;
+  height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  @apply relative;
+}
+.heart {
+  @apply absolute top-2 right-1;
 }

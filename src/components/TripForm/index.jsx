@@ -4,6 +4,25 @@ import { Link } from 'react-router-dom';
 import style from './TripForm.module.css';
 
 const TripForm = () => {
+  const [trip, setTrip] = useState({
+    origin: '',
+    destination: '',
+    startdate: '',
+    enddate: '',
+    travelers: 1,
+    children: 0,
+    tickets: 'economy',
+  });
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setTrip(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log(trip);
+  };
+
   return (
     <div className={style.containerHomepage}>
       <div className={style.homepageInnerTabs}>
@@ -32,7 +51,7 @@ const TripForm = () => {
           <h4 className='font-bold ml-4'>Roundtrip</h4>
         </div>
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className={style.formUp}>
               <div className='flex flex-col location'>
                 <label
@@ -49,6 +68,8 @@ const TripForm = () => {
                   <input
                     type='text'
                     name='origin'
+                    value={trip.origin || ''}
+                    onChange={handleChange}
                     id='input-group-1'
                     className={style.homepageInput}
                     placeholder='Leaving from'
@@ -70,6 +91,8 @@ const TripForm = () => {
                   <input
                     type='text'
                     name='destination'
+                    onChange={handleChange}
+                    value={trip.destination || ''}
                     id='input-group-1'
                     className={style.homepageInput}
                     placeholder='Going to'
@@ -82,36 +105,56 @@ const TripForm = () => {
               <div className='flex flex-col'>
                 <label className='mb-2'> Departing</label>
                 <input
-                  name='depature_date'
                   type='date'
-                  className={style.nextInput}
+                  name='startdate'
+                  min={new Date().toISOString().split('T')[0]}
+                  onChange={handleChange}
                   required
                 />
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Returning</label>
                 <input
-                  className={style.nextInput}
-                  name='return_date'
                   type='date'
+                  name='enddate'
+                  disabled={trip.startdate === '' ? true : false}
+                  min={
+                    trip.startdate
+                      ? new Date(trip.startdate).toISOString().split('T')[0]
+                      : ''
+                  }
+                  onChange={handleChange}
+                  required
                 />
                 {/* </div> */}
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Travelers</label>
 
-                <input list='travelers' className={style.nextInput} />
+                <input
+                  list='travelers'
+                  name='travelers'
+                  // value={trip.travelers || ''}
+                  onChange={handleChange}
+                  className={style.nextInput}
+                />
                 <datalist name='travelers' id='travelers'>
-                  <option value='1 Adult'></option>
-                  <option value='2'></option>
-                  <option value='3'></option>
-                  <option value='4'></option>
-                  <option value='5'></option>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
                 </datalist>
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Tickets</label>
-                <input list='tickets' className={style.nextInput} />
+                <input
+                  list='tickets'
+                  name='tickets'
+                  // value={trip.tickets || ''}
+                  onChange={handleChange}
+                  className={style.nextInput}
+                />
                 <datalist name='tickets' id='tickets'>
                   <option value='Economy' />
                   <option value='Business' />
@@ -120,12 +163,11 @@ const TripForm = () => {
               </div>
             </div>
             <div className={style.buttonContainer}>
-              <button
+              <input
                 type='submit'
+                value={'Search'}
                 className='rounded-full text-white bg-tertiary border p-1 w-44'
-              >
-                Search
-              </button>
+              />
             </div>
           </form>
         </div>
