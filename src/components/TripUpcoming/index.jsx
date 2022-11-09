@@ -17,7 +17,7 @@ const TripUpcoming = () => {
 							src='../../assets/Images/Seoul template 1x.png '
 							alt='seoul'
 						/>
-						{/* <div className='flex pl-4'> */}
+						
 						<div className={style.cardText}>
 							<div className={style.icons}>
 								<div className={style.img}>
@@ -56,7 +56,7 @@ const TripUpcoming = () => {
 								</div>
 							</div>
 						</div>
-						{/* </div> */}
+				
 					</div>
 					<div className={style.cardContainer2}>
 						<img

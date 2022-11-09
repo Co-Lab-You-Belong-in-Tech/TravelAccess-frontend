@@ -85,29 +85,29 @@ export const Trip = () => {
                 </div>
                 <div className='flex flex-col'>
                   <label className='mb-2'>Travelers</label>
-                  <select
-                    className={style.nextInput}
+                  <input list="travelers" className={style.nextInput}/>
+                  <datalist
                     name='travelers'
                     id='travelers'
                   >
-                    <option value='1'>1 Adult</option>
-                    <option value='2'>2</option>
-                    <option value='3'>3</option>
-                    <option value='4'>4</option>
-                    <option value='5'>5</option>
-                  </select>
+                    <option value='1 Adult'></option>
+                    <option value='2 Adult'></option>
+                    <option value='3 Adult'></option>
+                    <option value='4 Adult'></option>
+                    <option value='5 Adult'></option>
+                  </datalist>
                 </div>
                 <div className='flex flex-col'>
                   <label className='mb-2'>Tickets</label>
-                  <select
-                    className={style.nextInput}
-                    name='travelers'
-                    id='travelers'
+                  <input list ="tickets" className={style.nextInput}/>
+                  <datalist
+                    name='tickets'
+                    id='tickets'
                   >
-                    <option value='1'>Economy</option>
-                    <option value='2'>Business</option>
-                    <option value='3'>First class</option>
-                  </select>
+                    <option value='Economy'></option>
+                    <option value='Business'></option>
+                    <option value='First class'></option>
+                  </datalist>
                 </div>
               </div>
               <div className={style.buttonContainer}>
