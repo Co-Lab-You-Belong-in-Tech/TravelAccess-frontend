@@ -108,6 +108,7 @@ const TripUpcoming = () => {
 				</div>
 			</div>
 			
+			
 		</>
 	);
 };
