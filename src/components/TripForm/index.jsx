@@ -122,52 +122,29 @@ const TripForm = () => {
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Returning</label>
-                <input
-                  className={style.nextInput}
-                  name='return_date'
-                  type='date'
-                  min={
-                    trip.departure_date
-                      ? new Date(trip.departure_date)
-                          .toISOString()
-                          .split('T')[0]
-                      : ''
-                  }
-                  onChange={handleChange}
-                  required
-                  disabled={trip.departure_date === '' ? true : false}
-                />
+                <input className={style.nextInput} />
                 {/* </div> */}
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Travelers</label>
-                <select
-                  className={style.nextInput}
-                  value={trip.adult}
-                  onChange={handleChange}
-                  name='travelers'
-                  id='travelers'
-                >
-                  <option value='1'>1 Adult</option>
-                  <option value='2'>2</option>
-                  <option value='3'>3</option>
-                  <option value='4'>4</option>
-                  <option value='5'>5</option>
-                </select>
+
+                <input list='travelers' className={style.nextInput} />
+                <datalist name='travelers' id='travelers'>
+                  <option value='1 Adult'></option>
+                  <option value='2 Adult'></option>
+                  <option value='3 Adult'></option>
+                  <option value='4 Adult'></option>
+                  <option value='5 Adult'></option>
+                </datalist>
               </div>
               <div className='flex flex-col'>
                 <label className='mb-2'>Tickets</label>
-                <select
-                  className={style.nextInput}
-                  value={trip.ticket_class}
-                  onChange={handleChange}
-                  name='travelers'
-                  id='travelers'
-                >
-                  <option value='1'>Economy</option>
-                  <option value='2'>Business</option>
-                  <option value='3'>First class</option>
-                </select>
+                <input list='tickets' className={style.nextInput} />
+                <datalist name='tickets' id='tickets'>
+                  <option value='Economy' />
+                  <option value='Business' />
+                  <option value='First class' />
+                </datalist>
               </div>
             </div>
             <div className={style.buttonContainer}>
