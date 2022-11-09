@@ -100,7 +100,7 @@ const TripForm = () => {
 
                  
                 <input list="travelers" className={style.nextInput}  />
-                <datalist id="Adults"
+                <datalist
                   name='travelers'
                   id='travelers'
                 >
