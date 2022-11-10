@@ -110,8 +110,3 @@
 .heart {
   @apply absolute top-2 right-1;
 }
-@media only screen and (max-width:600px){
-  .myChecklist{
-    display: none;
-}
-}
