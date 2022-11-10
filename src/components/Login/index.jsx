@@ -56,7 +56,7 @@ const Login = () => {
           <div className=' flex justify-center items-center mt-20'>
             <button
               type='submit'
-              className=' rounded-full bg-[#5451D6] text-white p-1 w-48 font-bold'
+              className=' rounded-full bg-[#5451D6] text-white p-1 w-48 font-bold border-none'
             >
               Login
             </button>

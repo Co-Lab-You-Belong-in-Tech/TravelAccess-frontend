@@ -3,12 +3,13 @@ import traveller from '/assets/Images/Airport pic for checklist page 1x.png'
 import style from '../Guide/guide.module.css'
 
 const Guide = () => {
-    return (
+	return (
+		<>
 			<div>
 				<div className={style.guideContainer}>
 					<h2 className='text-primary mb-5 font-extrabold'>Guide</h2>
 					<div className={style.guideBorder}>
-						<div className="p-2 text-justify">
+						<div className='p-2 text-justify'>
 							<h3 className='font-bold'>
 								Travelling through the heart of Seoul
 							</h3>
@@ -45,7 +46,9 @@ const Guide = () => {
 					</div>
 				</div>
 			</div>
-		);
+			
+		</>
+	);
 }
 
 export default Guide
