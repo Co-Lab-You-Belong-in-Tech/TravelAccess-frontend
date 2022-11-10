@@ -48,7 +48,6 @@ const Header = () => {
             <div>
               <Link to='/dashboard/trip'>
                 <img src={profile} alt='profile' className='w-5 mx-5' />
-                {/* <FaUserCircle className='text-primary w-5 h-5' /> */}
               </Link>
             </div>
           </div>

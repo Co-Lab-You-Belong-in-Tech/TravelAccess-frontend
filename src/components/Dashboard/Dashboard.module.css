@@ -1,3 +1,8 @@
 .subHeader {
   @apply flex justify-around items-center align-middle border-b;
 }
+
+.topLinks {
+  @apply hover:border-b-2 hover:border-[#0F7173] hover:font-bold hover:text-[#0F7173] py-3 active:border-b-2 active:border-[#0F7173] active:font-bold active:text-[#0F7173]
+  visited:border-b-2 visited:border-[#0F7173] visited:font-bold visited:text-[#0F7173];
+}
