@@ -69,69 +69,91 @@ export const TravelPrep = () => {
 							</div>
 						</Button>
 					</div>
-					<div className={style.showcase} style={{ textAlign: 'center' }}>
-						<div className={style.overlay}>
-							<p className={style.textCountry}>Seoul</p>
-							<p className={style.textCountry}>South Korea</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					<a
+						href='https://www.britannica.com/place/Seoul/Economy'
+						target='_self'>
+						<div className={style.showcase} style={{ textAlign: 'center' }}>
+							<div className={style.overlay}>
+								<p className={style.textCountry}>Seoul</p>
+								<p className={style.textCountry}>South Korea</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className={style.showcase1} style={{ textAlign: 'center' }}>
-						<div>
-							<p className={style.textCountry}>London</p>
-							<p className={style.textCountry}>United Kingdom</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					</a>
+					<a href='https://www.britannica.com/place/London' target='_self'>
+						<div className={style.showcase1} style={{ textAlign: 'center' }}>
+							<div>
+								<p className={style.textCountry}>London</p>
+								<p className={style.textCountry}>United Kingdom</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className={style.showcase2} style={{ textAlign: 'center' }}>
-						<div>
-							<p className={style.textCountry}>New York City</p>
-							<p className={style.textCountry}>USA</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					</a>
+					<a
+						href='https://www.britannica.com/place/New-York-City'
+						target='_self'>
+						<div className={style.showcase2} style={{ textAlign: 'center' }}>
+							<div>
+								<p className={style.textCountry}>New York City</p>
+								<p className={style.textCountry}>USA</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className={style.showcase3} style={{ textAlign: 'center' }}>
-						<div>
-							<p className={style.textCountry}>Los Angeles</p>
-							<p className={style.textCountry}>USA</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					</a>
+					<a
+						href='https://www.britannica.com/place/Los-Angeles-California'
+						target='_self'>
+						<div className={style.showcase3} style={{ textAlign: 'center' }}>
+							<div>
+								<p className={style.textCountry}>Los Angeles</p>
+								<p className={style.textCountry}>USA</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className={style.showcase4} style={{ textAlign: 'center' }}>
-						<div>
-							<p className={style.textCountry}>Sydney</p>
-							<p className={style.textCountry}>Australia</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					</a>
+					<a href='#'>
+						<div className={style.showcase4} style={{ textAlign: 'center' }}>
+							<div>
+								<p className={style.textCountry}>Sydney</p>
+								<p className={style.textCountry}>Australia</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className={style.showcase5} style={{ textAlign: 'center' }}>
-						<div>
-							<p className={style.textCountry}>Bangkok</p>
-							<p className={style.textCountry}>Thailand</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					</a>
+					<a
+						href='https://www.britannica.com/place/Sydney-New-South-Wales'
+						target='_self'>
+						<div className={style.showcase5} style={{ textAlign: 'center' }}>
+							<div>
+								<p className={style.textCountry}>Bangkok</p>
+								<p className={style.textCountry}>Thailand</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
-					<div className={style.showcase6} style={{ textAlign: 'center' }}>
-						<div className='bg-black'>
-							<p className={style.textCountry}>Sao Paulo</p>
-							<p className={style.textCountry}>Brazil</p>
-							<div className={style.heart}>
-								<img src={like} alt={like} />
+					</a>
+					<a href='https://www.britannica.com/place/Sao-Paulo-Brazil' target='_self'>
+						<div className={style.showcase6} style={{ textAlign: 'center' }}>
+							<div>
+								<p className={style.textCountry}>Sao Paulo</p>
+								<p className={style.textCountry}>Brazil</p>
+								<div className={style.heart}>
+									<img src={like} alt={like} />
+								</div>
 							</div>
 						</div>
-					</div>
+					</a>
 
 					{/* <div>
           {trips.length <= 0 ? (
