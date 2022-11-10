@@ -11,7 +11,8 @@
   text-decoration: white !important;
 }
 .link {
-  @apply mb-5 active:decoration-white active:border-spacing-y-8;
+  @apply hover:border-b-2 hover:border-white hover:font-bold hover:text-white py-3 active:border-b-2 active:border-white active:font-bold active:text-white
+  visited:border-b-2 visited:border-white visited:font-bold visited:text-white;
 }
 
 .formUp {

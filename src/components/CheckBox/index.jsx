@@ -1,13 +1,16 @@
 import { useState } from 'react';
 
 const CheckBox = () => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setIsChecked] = useState(false);
+
   return (
     <div>
       <input
         type='checkbox'
         checked={checked}
-        onChange={() => setChecked(!checked)}
+        onChange={() => {
+          setIsChecked(!checked);
+        }}
         className='mr-2'
       />
     </div>

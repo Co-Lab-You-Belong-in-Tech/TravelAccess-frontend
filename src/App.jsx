@@ -1,4 +1,5 @@
 import { Routes, Route, Outlet } from 'react-router-dom';
+import NotFound from './components/404';
 import CheckList from './components/CheckList';
 import { Dashboard } from './components/Dashboard';
 import Header from './components/Header';
@@ -25,12 +26,7 @@ const App = () => {
             </Route>
           </Route>
         </Route>
-        <Route
-          path='*'
-          element={
-            <h1 className='grid place-items-center h-[100vh]'>404 Not Found</h1>
-          }
-        />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   );
