@@ -7,13 +7,4 @@
 .footerList {
   @apply mb-2;
 }
-@media only screen and (max-width: 600px) {
-  .footerBackground {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .footerBackground {
-    display: none;
-  }
-}
+
