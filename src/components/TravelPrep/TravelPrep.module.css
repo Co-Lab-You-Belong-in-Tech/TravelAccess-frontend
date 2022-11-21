@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
@@ -47,7 +47,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
@@ -61,7 +61,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
@@ -75,7 +75,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
@@ -89,7 +89,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
@@ -103,10 +103,63 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color:rgb(0, 0, 0,0.4);
+  background-color: rgb(0, 0, 0, 0.4);
   background-blend-mode: multiply;
   @apply relative;
 }
 .heart {
   @apply absolute top-2 right-1;
+}
+
+.containerHomepage {
+  @apply rounded-xl border-2 border-[#0F7173] m-5 lg:mx-[5.5rem];
+}
+.homepageInnerTabs {
+  @apply bg-[#117E81] rounded-t text-white;
+}
+.homepageTabs {
+  @apply flex  justify-around items-center py-3;
+}
+.links {
+  text-decoration: white !important;
+}
+.link {
+  @apply hover:border-b-2 hover:border-white hover:font-bold hover:text-white py-3 active:border-b-2 active:border-white active:font-bold active:text-white
+  visited:border-b-2 visited:border-white visited:font-bold visited:text-white;
+}
+
+.formUp {
+  @apply grid gap-3 grid-cols-1 lg:grid-cols-2;
+}
+.formDown {
+  @apply grid gap-3 grid-cols-2 lg:grid-cols-5 mt-3;
+}
+.homepageInput {
+  @apply bg-gray-50 border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5;
+}
+.nextInput {
+  @apply bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 text-primary;
+}
+
+.buttonContainer {
+  @apply flex justify-end items-center mt-3;
+}
+
+.explore {
+  @apply flex justify-between items-center my-5 text-[#0F7173];
+}
+.exploreDestinations {
+  @apply font-bold text-lg;
+}
+.containerExplore {
+  @apply m-5 lg:mx-[5.5rem];
+}
+p {
+  @apply text-sm;
+}
+
+@media screen and (max-width: 768px) {
+  .bottomImg {
+    display: none;
+  }
 }
