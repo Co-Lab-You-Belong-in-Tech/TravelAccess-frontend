@@ -44,9 +44,9 @@ export const authSlice = createSlice({
       state.isAuthenticated = true;
     },
     logout: state => {
-      state.token = null;
+      state.isAuthenticated = null;
       state.email = null;
-      state.isAuthenticated = false;
+      state.token = null;
     },
     signUp: (state, { email, token }) => {
       state.email = email;

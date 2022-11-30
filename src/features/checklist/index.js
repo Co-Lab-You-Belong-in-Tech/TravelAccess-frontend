@@ -12,6 +12,17 @@ export const fetchChecklist = createAsyncThunk(
     }
   }
 );
+// export const addChecklistItem = createAsyncThunk(
+//   'checklist/addChecklistItem',
+//   async () => {
+//     try {
+//       const response = await axiosInstance.get('/api/check_list');
+//       return response.data;
+//     } catch (error) {
+//       return error.response.data.message;
+//     }
+//   }
+// );
 
 export const checkListSlice = createSlice({
   name: 'checklist',
