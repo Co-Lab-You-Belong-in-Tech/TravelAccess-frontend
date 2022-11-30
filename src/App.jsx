@@ -18,13 +18,13 @@ const App = () => {
           <Route path='/' element={<Homepage />} />
           <Route path='login' element={<Login />} />
           <Route path='signup' element={<Signup />} />
-          <Route element={<ProtectedRoutes />}>
-            <Route path='dashboard' element={<Dashboard />}>
-              <Route path='trip' element={<Trip />} />
-              <Route path='travelprep' element={<TravelPrep />} />
-              <Route path='checklist' element={<CheckList />} />
-            </Route>
+          {/* <Route element={<ProtectedRoutes />}> */}
+          <Route path='dashboard' element={<Dashboard />}>
+            <Route path='trip' element={<Trip />} />
+            <Route path='travelprep' element={<TravelPrep />} />
+            <Route path='checklist' element={<CheckList />} />
           </Route>
+          {/* </Route> */}
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>

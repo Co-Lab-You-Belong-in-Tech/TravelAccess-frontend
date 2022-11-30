@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { MdLocationOn } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import style from './TripForm.module.css';
+import { LocationSearchInput } from '../CitySearch';
 
 const TripForm = () => {
   const [search, setSearch] = useState('');
@@ -48,13 +49,14 @@ const TripForm = () => {
         </ul>
       </div>
       <section className=' p-1 lg:p-6'>
-        <div className='flex mb-2 '>
+        {/* <div className='flex mb-2 '>
           <h4>One Way</h4>
           <h4 className='font-bold ml-4'>Roundtrip</h4>
-        </div>
+        </div> */}
         <div>
           <form onSubmit={handleSubmit}>
             <div className={style.formUp}>
+              <LocationSearchInput value={e => e.target.value} />
               <div className='flex flex-col location'>
                 <label
                   htmlFor='input-group-1'
@@ -75,6 +77,7 @@ const TripForm = () => {
                     id='input-group-1'
                     className={style.homepageInput}
                     placeholder='Leaving from'
+                    required
                   />
                 </div>
               </div>
@@ -98,6 +101,7 @@ const TripForm = () => {
                     id='input-group-1'
                     className={style.homepageInput}
                     placeholder='Going to'
+                    required
                   />
                 </div>
               </div>
@@ -133,16 +137,17 @@ const TripForm = () => {
                 {/* </div> */}
               </div>
               <div className='flex flex-col'>
-                <label className='mb-2'>Travelers</label>
+                <label className='mb-2'>Adults</label>
 
                 <input
-                  list='travelers'
-                  name='travelers'
-                  // value={trip.travelers || ''}
+                  list='Adult'
+                  name='Adult'
+                  // value={trip.Adult || ''}
                   onChange={handleChange}
                   className={style.nextInput}
+                  required
                 />
-                <datalist name='travelers' id='travelers'>
+                <datalist name='Adult' id='Adult'>
                   <option value='1'>1</option>
                   <option value='2'>2</option>
                   <option value='3'>3</option>
@@ -150,6 +155,25 @@ const TripForm = () => {
                   <option value='5'>5</option>
                 </datalist>
               </div>
+              <div className='flex flex-col'>
+                <label className='mb-2'>Children</label>
+
+                <input
+                  list='children'
+                  name='children'
+                  // value={trip.travelers || ''}
+                  onChange={handleChange}
+                  className={style.nextInput}
+                />
+                <datalist name='children' id='children'>
+                  <option value='1'>1</option>
+                  <option value='2'>2</option>
+                  <option value='3'>3</option>
+                  <option value='4'>4</option>
+                  <option value='5'>5</option>
+                </datalist>
+              </div>
+
               <div className='flex flex-col'>
                 <label className='mb-2'>Tickets</label>
                 <input
@@ -169,7 +193,7 @@ const TripForm = () => {
             <div className={style.buttonContainer}>
               <input
                 type='submit'
-                value={'Search'}
+                value={'Create Trip'}
                 className='rounded-full text-white bg-tertiary border p-1 w-44'
               />
             </div>

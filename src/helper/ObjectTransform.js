@@ -1,18 +1,28 @@
-export const transform = data => {
-  Object.values(
-    data.reduce((result, { item_name, status, category }) => {
-      // Create new group
-      if (!result[category])
-        result[category] = {
-          category,
-          items: [],
-        };
-      // Append to group
-      result[category].items.push({
-        item_name,
-        status,
-      });
-      return result;
-    }, {})
-  );
-};
+// class itemCollection {
+//   constructor() {
+//     const addItem = name => {
+//       const item = new item(name);
+//       this.items.push(item);
+//     };
+//     const removeItem = name => {
+//       this.items = this.items.filter(item => item.name !== name);
+//     };
+//     const getItem = () => {
+//       return this.items;
+//     };
+//   }
+// }
+
+function itemCollection() {
+  this.items = [];
+  this.addItem = name => {
+    const item = new item(name);
+    this.items.push(item);
+  };
+  this.removeItem = name => {
+    this.items = this.items.filter(item => item.name !== name);
+  };
+  this.getItem = () => {
+    return this.items;
+  };
+}

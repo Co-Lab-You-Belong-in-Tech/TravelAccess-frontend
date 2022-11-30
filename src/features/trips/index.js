@@ -1,13 +1,16 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axiosInstance from '../../helper/axios';
+import print from '../../helper/print';
 
 export const fetchTrips = createAsyncThunk('trips/fetchTrips', async () => {
-  try {
-    const response = await axiosInstance.get('/api/trips');
-    return response.data;
-  } catch (error) {
-    return error.response.data.message;
-  }
+  const response = await axiosInstance.get('/api/trips');
+  return response.data;
+});
+
+export const addTrip = createAsyncThunk('trips/addTrip', async data => {
+  print(data);
+  const response = await axiosInstance.post('/api/trips', data);
+  return response.data;
 });
 
 export const tripsSlice = createSlice({
@@ -17,6 +20,7 @@ export const tripsSlice = createSlice({
     trips: [],
     loading: true,
     message: null,
+    error: false,
   },
   reducers: {
     addItem: (state, actions) => {
@@ -35,6 +39,20 @@ export const tripsSlice = createSlice({
     },
     [fetchTrips.pending]: (state, action) => {
       return { ...state, loading: true };
+    },
+    [addTrip.rejected]: (state, action) => {
+      return {
+        ...state,
+        message: action.payload,
+        loading: false,
+        error: true,
+      };
+    },
+    [addTrip.pending]: (state, action) => {
+      return { ...state, loading: true };
+    },
+    [addTrip.fulfilled]: (state, action) => {
+      return { ...state, trips: action.payload, loading: false };
     },
   },
 });
